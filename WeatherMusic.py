@@ -12,6 +12,7 @@ CLIENT_SIDE_URL = "http://127.0.0.1"
 PORT = 5000
 REDIRECT_URI = "{}:{}/callback".format(CLIENT_SIDE_URL, PORT)
 
+# open weather map api creds
 owm = pyowm.OWM('2afa8543802728d0be8e1337cf61cf87')  # hoovermr's default key
 app = Flask(__name__)
 
@@ -31,34 +32,62 @@ def callback():
     if request.args.get("code"):
         sp = get_spotify(request.args["code"])
 
-    get_saved_tracks(sp)
-    get_weather()
+    # pick a location and get the time of day
+    # TODO: make this user selectable
+    location = 'Rockwall,us'
+    w = get_weather(location)
+    factor = w.get_temperature('fahrenheit')['temp']/100
+    day_night = 'night' if w.get_reference_time() > w.get_sunset_time() else 'day'
 
-    # match up the variance with the temperature
-    # render the recommendation results
-    return render_template("index.html")
+    # match up the valence with the temperature
+    items = get_weather_playlist(sp, factor)
+
+    return render_template("index.html",
+                           weather=w,
+                           location=location,
+                           day_night=day_night,
+                           items=items,
+                           time=w.get_reference_time(timeformat='iso'))
 
 
 def get_saved_tracks(sp):
     """get a user's saved tracks playlist"""
-    if sp:
-        results = sp.current_user_saved_tracks()
-        for item in results['items']:
-            track = item['track']
-            feature = sp.audio_features([track['uri']])
-            print track['name'] + ' - ' + track['artists'][0]['name'] + ' Valence: ' + str(feature[0]['valence'])
-    else:
-        print "Can't get token"
+    # start with 100 tracks
+    result_list = []
+    for x in range(0, 2):
+        results = sp.current_user_saved_tracks(limit=50, offset=50*x)
+        result_list.append(results)
+    return result_list
 
 
-def get_weather():
+def get_weather(location):
     """get weather details like temperature"""
-    observation = owm.weather_at_place('London,uk') #start with london as default
+    observation = owm.weather_at_place(location)
     w = observation.get_weather()
-    temp = w.get_temperature('fahrenheit')  # {'temp_max': 10.5, 'temp': 9.7, 'temp_min': 9.0}
+    return w
 
-    print(temp['temp'])
-    print(w)
+
+def get_weather_playlist(sp, factor):
+    # get last X saved tracks
+    result_list = get_saved_tracks(sp)
+
+    uris = []
+    for results in result_list:
+        for item in results['items']:
+            uris.append(item['track']['uri'])
+    features = sp.audio_features(uris)
+
+    items = []
+    for results in result_list:
+        for item, feature in zip(results['items'], features):
+            track = item['track']
+            # using boundary of 0.1 as a test run
+            if factor - 0.1 < feature['valence'] < factor + 0.1:
+                items.append(item)
+                print track['name'] + ' - ' + track['artists'][0]['name'] + ' Valence: ' + str(feature['valence'])
+                # else:
+                # print 'NOT PICKED' + track['name'] + ' - ' + track['artists'][0]['name'] + ' Valence: ' + str(feature[0]['valence'])
+    return items
 
 
 def get_oauth():
