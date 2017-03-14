@@ -35,28 +35,27 @@ def callback():
 
     return render_template("index.html")
 
-    # pick a location and get the time of day
-    # TODO: make this user selectable
-    location = 'Munich,de'
+
+@app.route('/gen_playlist', methods=['GET', 'POST'])
+def gen_playlist():
+    if request.form['location']:
+        location = request.form['location']
+
+    sp = get_spotify()
+
     w, observation = get_weather(location)
-    factor = w.get_temperature('fahrenheit')['temp']/100
+    factor = w.get_temperature('fahrenheit')['temp'] / 100
     day_night = 'night' if w.get_reference_time() > w.get_sunset_time() else 'day'
 
     # match up the valence with the temperature
     items = get_weather_playlist(sp, factor)
 
-    return render_template("index.html",
+    return render_template("gen_playlist.html",
                            weather=w,
                            location=location,
                            day_night=day_night,
                            items=items,
                            time=observation.get_reception_time(timeformat='iso'))
-
-
-@app.route('/gen_playlist', methods=['GET', 'POST'])
-def gen_playlist():
-    if request.args.get("location"):
-        location = location
 
 
 def get_saved_tracks(sp):
