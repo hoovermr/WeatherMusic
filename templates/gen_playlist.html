@@ -24,7 +24,7 @@
                     <td> {{ loop.index0+1 }}</td>
                     <td><img src="{{ item['track']['album']['images'][0]['url'] }}" height="30%"></td>
                     <td><audio controls><source src="{{ item['track']['preview_url'] }}"></audio>
-                    <td>{{ item['track']['name'] }} - {{ item['track']['artists'][0]['name'] }}</td>
+                    <td><h4>{{ item['track']['name'] }} - {{ item['track']['artists'][0]['name'] }}</h4></td>
                 </tr>
                 {% endfor %}
             </tbody>
