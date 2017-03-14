@@ -7,28 +7,25 @@
 <body>
     {% extends "base.html" %}
     {% block content %}
+    <div class="container">
+    <div class="Absolute-Center is-Responsive">
     <div style="text-align:center">
-    <h1>Weather Music: {{ location }}</h1>
-    <h1>Time: {{ time }}</h1>
-    <h1>Temperature: {{ weather.get_temperature('fahrenheit')['temp'] }} °F, Weather: {{ weather.get_status() }}</h1>
-    <div class="big-icons"><i class="wi wi-owm-{{ day_night }}-{{ weather.get_weather_code() }}"></i></div>
-    <button type="button" class="btn btn-primary">Export To Spotify!</button>
-    <br><br><br>
+        <h1>Weather Music</h1>
+        <div class="big-icons"><i class="wi wi-umbrella"></i></div>
     </div>
-    <div class="table-responsive">
-        <table class="table table-striped">
-            <thead></thead>
-            <tbody>
-                {% for item in items %}
-                <td>
-                    <td> {{ loop.index0+1 }}</td>
-                    <td><img src="{{ item['track']['album']['images'][0]['url'] }}" height="30%"></td>
-                    <td><audio controls><source src="{{ item['track']['preview_url'] }}"></audio>
-                    <td>{{ item['track']['name'] }} - {{ item['track']['artists'][0]['name'] }}</td>
-                </tr>
-                {% endfor %}
-            </tbody>
-        </table>
+    <div class="row">
+        <div class="col-sm-12 col-md-10 col-md-offset-1">
+        <form role="form">
+            <div class="input-group">
+              <input type="text" class="form-control input-sm" placeholder="Enter City... (e.g London, GB)">
+              <span class="input-group-btn">
+                <button class="btn btn-default btn-sm" type="submit"><span class="glyphicon glyphicon-search"></span></button>
+              </span>
+            </div>
+        </form>
+        </div>
+    </div>
+    </div>
     </div>
     {% endblock %}
 </body>

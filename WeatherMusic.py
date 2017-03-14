@@ -33,10 +33,12 @@ def callback():
     if request.args.get("code"):
         sp = get_spotify(request.args["code"])
 
+    return render_template("index.html")
+
     # pick a location and get the time of day
     # TODO: make this user selectable
     location = 'Munich,de'
-    w = get_weather(location)
+    w, observation = get_weather(location)
     factor = w.get_temperature('fahrenheit')['temp']/100
     day_night = 'night' if w.get_reference_time() > w.get_sunset_time() else 'day'
 
@@ -48,7 +50,13 @@ def callback():
                            location=location,
                            day_night=day_night,
                            items=items,
-                           time=w.get_reference_time(timeformat='iso'))
+                           time=observation.get_reception_time(timeformat='iso'))
+
+
+@app.route('/gen_playlist', methods=['GET', 'POST'])
+def gen_playlist():
+    if request.args.get("location"):
+        location = location
 
 
 def get_saved_tracks(sp):
@@ -65,7 +73,7 @@ def get_weather(location):
     """get weather details like temperature"""
     observation = owm.weather_at_place(location)
     w = observation.get_weather()
-    return w
+    return w, observation
 
 
 def get_weather_playlist(sp, factor):
