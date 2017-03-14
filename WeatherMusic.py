@@ -2,6 +2,7 @@ from flask import Flask, render_template, redirect, request
 import spotipy
 import spotipy.oauth2
 import pyowm
+from random import shuffle
 
 # spotipy authorization creds
 client_id = '273c232d912349fe92db1ca0f268d60f'
@@ -34,7 +35,7 @@ def callback():
 
     # pick a location and get the time of day
     # TODO: make this user selectable
-    location = 'Rockwall,us'
+    location = 'Munich,de'
     w = get_weather(location)
     factor = w.get_temperature('fahrenheit')['temp']/100
     day_night = 'night' if w.get_reference_time() > w.get_sunset_time() else 'day'
@@ -52,9 +53,9 @@ def callback():
 
 def get_saved_tracks(sp):
     """get a user's saved tracks playlist"""
-    # start with 100 tracks
+    # each loop is 50 tracks
     result_list = []
-    for x in range(0, 2):
+    for x in range(0, 4):
         results = sp.current_user_saved_tracks(limit=50, offset=50*x)
         result_list.append(results)
     return result_list
@@ -75,19 +76,23 @@ def get_weather_playlist(sp, factor):
     for results in result_list:
         for item in results['items']:
             uris.append(item['track']['uri'])
-    features = sp.audio_features(uris)
+
+    feature_list = []
+    for group in chunker(uris, 50):
+        feature_list.append(sp.audio_features(group))
 
     items = []
-    for results in result_list:
+    # result_list and feature_list are both lists of lists
+    for results, features in zip(result_list, feature_list):
+        # results['items'] and features are both 50 entries long
         for item, feature in zip(results['items'], features):
             track = item['track']
             # using boundary of 0.1 as a test run
             if factor - 0.1 < feature['valence'] < factor + 0.1:
                 items.append(item)
                 print track['name'] + ' - ' + track['artists'][0]['name'] + ' Valence: ' + str(feature['valence'])
-                # else:
-                # print 'NOT PICKED' + track['name'] + ' - ' + track['artists'][0]['name'] + ' Valence: ' + str(feature[0]['valence'])
-    return items
+    shuffle(items)
+    return items[:20]
 
 
 def get_oauth():
@@ -104,6 +109,10 @@ def get_spotify(auth_token=None):
     if not token_info and auth_token:
         token_info = oauth.get_access_token(auth_token)
     return spotipy.Spotify(token_info["access_token"])
+
+
+def chunker(seq, size):
+    return (seq[pos:pos + size] for pos in xrange(0, len(seq), size))
 
 
 if __name__ == '__main__':
