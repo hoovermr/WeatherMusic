@@ -8,10 +8,10 @@
     {% extends "base.html" %}
     {% block content %}
     <div style="text-align:center">
-    <h1>Weather Music: {{ location }}</h1>
+    <h1>Weather Music: {{ obs.get_location().get_name() }}</h1>
     <h1>Time: {{ time }} UTC</h1>
-    <h1>Temperature: {{ weather.get_temperature('fahrenheit')['temp'] }} °F, Weather: {{ weather.get_status() }}</h1>
-    <div class="big-icons"><i class="wi wi-owm-{{ day_night }}-{{ weather.get_weather_code() }}"></i></div>
+    <h1>Temperature: {{ w.get_temperature('fahrenheit')['temp'] }} °F, Weather: {{ w.get_status() }}</h1>
+    <div class="big-icons"><i class="wi wi-owm-{{ day_night }}-{{ w.get_weather_code() }}"></i></div>
     <button type="button" class="btn btn-primary">Export To Spotify!</button>
     <br><br><br>
     </div>

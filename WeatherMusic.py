@@ -43,19 +43,23 @@ def gen_playlist():
 
     sp = get_spotify()
 
-    w, observation = get_weather(location)
+    w, obs = get_weather(location)
     factor = w.get_temperature('fahrenheit')['temp'] / 100
     day_night = 'night' if w.get_reference_time() > w.get_sunset_time() else 'day'
 
     # match up the valence with the temperature
     items = get_weather_playlist(sp, factor)
 
+    print obs
+    print w
+
+
     return render_template("gen_playlist.html",
-                           weather=w,
-                           location=location,
+                           w=w,
+                           obs=obs,
                            day_night=day_night,
                            items=items,
-                           time=observation.get_reception_time(timeformat='iso'))
+                           time=obs.get_reception_time(timeformat='iso'))
 
 
 def get_saved_tracks(sp):
