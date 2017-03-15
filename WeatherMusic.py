@@ -4,6 +4,7 @@ import json
 import spotipy
 import spotipy.oauth2
 import pyowm
+import sys
 from random import shuffle
 
 # spotipy authorization creds
@@ -18,9 +19,6 @@ REDIRECT_URI = "{}:{}/callback".format(CLIENT_SIDE_URL, PORT)
 # open weather map api creds
 owm = pyowm.OWM('2afa8543802728d0be8e1337cf61cf87')  # hoovermr's default key
 app = Flask(__name__)
-
-# set the secret key.  keep this really secret:
-app.secret_key = 'A0Zr98j/3yX R~XHH!jmN]LWX/,?RT'
 
 
 @app.route('/')
@@ -55,6 +53,13 @@ def gen_playlist():
     # match up the valence with the temperature
     items = get_weather_playlist(sp, factor)
 
+    track_ids = []
+    for item in items:
+        track_ids.append(item['track']['id'])
+    session['track_ids'] = track_ids
+    session['location'] = location
+    session.modified = True
+
     return render_template("gen_playlist.html",
                            w=w,
                            obs=obs,
@@ -65,21 +70,14 @@ def gen_playlist():
 
 @app.route('/make_playlist', methods=['GET', 'POST'])
 def make_playlist():
-    items = request.form['items']
-    items = json.loads(items)
-    print items
-    print type(items)
-    location = request.form['location']
+    track_ids = session.pop('track_ids', None)
+    location = session.pop('location', None)
+
     sp = get_spotify()
     user_id = sp.current_user()["id"]
-    playlist_id = location + '_' + time.strftime("%d/%m/%Y")
-    sp.user_playlist_create(user_id, playlist_id)
-    track_ids = []
-    for item in items:
-        track_ids.append(item['track']['id'])
-
-    results = sp.user_playlist_add_tracks(user_id, playlist_id, track_ids)
-    print results
+    playlist_name = location + '_' + time.strftime("%d/%m/%Y")
+    playlist = sp.user_playlist_create(user_id, playlist_name)
+    sp.user_playlist_add_tracks(user_id, playlist['id'], track_ids)
 
     return render_template("make_playlist.html")
 
@@ -149,4 +147,6 @@ def chunker(seq, size):
 
 
 if __name__ == '__main__':
+    # set the secret key.  keep this really secret:
+    app.secret_key = 'A0Zr98j/3yX R~XHH!jmN]LWX/,?RT'
     app.run(debug=True)
