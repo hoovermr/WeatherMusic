@@ -12,7 +12,11 @@
     <h1>Time: {{ time }} UTC</h1>
     <h1>Temperature: {{ w.get_temperature('fahrenheit')['temp'] }} °F, Weather: {{ w.get_status() }}</h1>
     <div class="big-icons"><i class="wi wi-owm-{{ day_night }}-{{ w.get_weather_code() }}"></i></div>
-    <button type="button" class="btn btn-primary">Export To Spotify!</button>
+    <form role="form" action="/make_playlist" method="post">
+        <input type="hidden" name="items" value="{{ items|tojson }}">
+        <input type="hidden" name="location" value="{{ obs.get_location().get_name() }}">
+        <button class="btn btn-primary" type="submit">Export To Spotify!</button>
+    </form>
     <br><br><br>
     </div>
     <div class="table-responsive">

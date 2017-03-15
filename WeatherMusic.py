@@ -1,4 +1,6 @@
-from flask import Flask, render_template, redirect, request
+from flask import Flask, render_template, redirect, request, session
+import time
+import json
 import spotipy
 import spotipy.oauth2
 import pyowm
@@ -16,6 +18,9 @@ REDIRECT_URI = "{}:{}/callback".format(CLIENT_SIDE_URL, PORT)
 # open weather map api creds
 owm = pyowm.OWM('2afa8543802728d0be8e1337cf61cf87')  # hoovermr's default key
 app = Flask(__name__)
+
+# set the secret key.  keep this really secret:
+app.secret_key = 'A0Zr98j/3yX R~XHH!jmN]LWX/,?RT'
 
 
 @app.route('/')
@@ -50,16 +55,33 @@ def gen_playlist():
     # match up the valence with the temperature
     items = get_weather_playlist(sp, factor)
 
-    print obs
-    print w
-
-
     return render_template("gen_playlist.html",
                            w=w,
                            obs=obs,
                            day_night=day_night,
                            items=items,
                            time=obs.get_reception_time(timeformat='iso'))
+
+
+@app.route('/make_playlist', methods=['GET', 'POST'])
+def make_playlist():
+    items = request.form['items']
+    items = json.loads(items)
+    print items
+    print type(items)
+    location = request.form['location']
+    sp = get_spotify()
+    user_id = sp.current_user()["id"]
+    playlist_id = location + '_' + time.strftime("%d/%m/%Y")
+    sp.user_playlist_create(user_id, playlist_id)
+    track_ids = []
+    for item in items:
+        track_ids.append(item['track']['id'])
+
+    results = sp.user_playlist_add_tracks(user_id, playlist_id, track_ids)
+    print results
+
+    return render_template("make_playlist.html")
 
 
 def get_saved_tracks(sp):
@@ -110,7 +132,7 @@ def get_oauth():
     """Return a Spotipy Oauth2 object."""
     return spotipy.oauth2.SpotifyOAuth(
         client_id, client_secret, REDIRECT_URI,
-        scope='user-library-read', cache_path=".tokens")
+        scope='user-library-read playlist-modify-public', cache_path=".tokens")
 
 
 def get_spotify(auth_token=None):
@@ -127,4 +149,4 @@ def chunker(seq, size):
 
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)
