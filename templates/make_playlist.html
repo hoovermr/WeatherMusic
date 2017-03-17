@@ -7,7 +7,11 @@
 <body>
     {% extends "base.html" %}
     {% block content %}
-
+    <div style="text-align:center">
+    <h1>Weather Music: {{ location }}</h1>
+    <h1>Time: {{ time }} UTC</h1>
+    <h1>Temperature: {{ temp }} °F, Weather: {{ status }}</h1>
+    <div class="big-icons"><i class="wi wi-owm-{{ dn_code }}"></i></div>
     {% endblock %}
 </body>
 </html>

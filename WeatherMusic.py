@@ -1,10 +1,9 @@
+# -*- coding: utf-8 -*-
 from flask import Flask, render_template, redirect, request, session
 import time
-import json
 import spotipy
 import spotipy.oauth2
 import pyowm
-import sys
 from random import shuffle
 
 # spotipy authorization creds
@@ -58,28 +57,40 @@ def gen_playlist():
         track_ids.append(item['track']['id'])
     session['track_ids'] = track_ids
     session['location'] = location
+    session['temp'] = w.get_temperature('fahrenheit')['temp']
+    session['time'] = obs.get_reception_time(timeformat='iso')
+    session['status'] = w.get_status()
+    session['dn_code'] = day_night + '-' + w.get_weather_code()
     session.modified = True
 
     return render_template("gen_playlist.html",
                            w=w,
                            obs=obs,
                            day_night=day_night,
-                           items=items,
-                           time=obs.get_reception_time(timeformat='iso'))
+                           items=items)
 
 
 @app.route('/make_playlist', methods=['GET', 'POST'])
 def make_playlist():
     track_ids = session.pop('track_ids', None)
     location = session.pop('location', None)
+    temp = session.pop('temp', None)
+    w_time = session.pop('time', None)
+    w_status = session.pop('status', None)
+    dn_code = session.pop('dn_code', None)
 
     sp = get_spotify()
     user_id = sp.current_user()["id"]
-    playlist_name = location + '_' + time.strftime("%d/%m/%Y")
+    playlist_name = temp + ' °F ' + location + time.strftime("%d/%m/%Y")
     playlist = sp.user_playlist_create(user_id, playlist_name)
     sp.user_playlist_add_tracks(user_id, playlist['id'], track_ids)
 
-    return render_template("make_playlist.html")
+    return render_template("make_playlist.html",
+                           location=location,
+                           temp=temp,
+                           time=w_time,
+                           status=w_status,
+                           dn_code=dn_code)
 
 
 def get_saved_tracks(sp):
