@@ -60,7 +60,7 @@ def gen_playlist():
     session['temp'] = w.get_temperature('fahrenheit')['temp']
     session['time'] = obs.get_reception_time(timeformat='iso')
     session['status'] = w.get_status()
-    session['dn_code'] = day_night + '-' + w.get_weather_code()
+    session['dn_code'] = day_night + '-' + str(w.get_weather_code())
     session.modified = True
 
     return render_template("gen_playlist.html",
@@ -81,7 +81,8 @@ def make_playlist():
 
     sp = get_spotify()
     user_id = sp.current_user()["id"]
-    playlist_name = temp + ' °F ' + location + time.strftime("%d/%m/%Y")
+
+    playlist_name = str("{0:.0f}".format(temp)) + unicode(' °F ', 'utf-8') + location + ' ' + time.strftime("%d/%m/%Y")
     playlist = sp.user_playlist_create(user_id, playlist_name)
     sp.user_playlist_add_tracks(user_id, playlist['id'], track_ids)
 
@@ -90,7 +91,8 @@ def make_playlist():
                            temp=temp,
                            time=w_time,
                            status=w_status,
-                           dn_code=dn_code)
+                           dn_code=dn_code,
+                           playlist_uri=playlist['uri'])
 
 
 def get_saved_tracks(sp):
