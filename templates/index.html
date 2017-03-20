@@ -8,23 +8,34 @@
     {% extends "base.html" %}
     {% block content %}
     <div class="container">
-    <div class="Absolute-Center is-Responsive">
-    <div style="text-align:center">
-        <h1>Weather Music</h1>
-        <div class="big-icons"><i class="wi wi-umbrella"></i></div>
-    </div>
-    <div class="row">
-        <div class="col-sm-12 col-md-10 col-md-offset-1">
-        <form role="form" action="/gen_playlist" method="post">
-            <div class="input-group">
-              <input type="text" class="form-control input-sm" name="location" placeholder="Enter City... (e.g London, GB)" required>
-              <span class="input-group-btn">
-                <button class="btn btn-default btn-sm" type="submit"><span class="glyphicon glyphicon-search"></span></button>
-              </span>
-            </div>
-        </form>
+    <div style="text-align:center;">
+        <div class="row">
+        <div class="col-xs-12 col-md-11 col-lg-12">
+            <h1>Weather Music</h1>
+            <i class="wi wi-umbrella"></i>
         </div>
-    </div>
+        </div>
+        <div class="row">
+        <div class="col-xs-6 col-sm-6 col-md-10" style="margin: 0 auto; float:none;">
+            <form role="form" action="/gen_playlist" method="post">
+                <div class="input-group">
+                  <input type="text" class="form-control input-sm" name="location" placeholder="Enter City... (e.g London, GB)" required>
+                  <span class="input-group-btn">
+                      <button class="btn btn-default btn-sm" type="submit"><span class="glyphicon glyphicon-search"></span></button>
+                  </span>
+                </div>
+            </form>
+        </div>
+        </div>
+        <div class="footer navbar-fixed-bottom">
+        <div class="row row-centered">
+            <p>powered by:</p>
+            <div class="spotify-logo">
+            <div class="col-xs-3 col-md-6 col-centered"><img src="/static/img/Spotify_Logo_Gray.svg" class="img-responsive center-block"></div>
+            <div class="col-xs-3 col-md-6 col-centered"><div class = "v-center"><img src="/static/img/OpenWeatherMap_Logo_Gray.svg" class="img-responsive center-block"></div></div>
+            </div>
+        </div>
+        </div>
     </div>
     </div>
     {% endblock %}

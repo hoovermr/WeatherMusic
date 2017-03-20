@@ -46,6 +46,7 @@ def gen_playlist():
     sp = get_spotify()
 
     w, obs = get_weather(location)
+    location = obs.get_location()
     factor = w.get_temperature('fahrenheit')['temp'] / 100
     day_night = 'night' if w.get_reference_time() > w.get_sunset_time() else 'day'
 
@@ -56,10 +57,10 @@ def gen_playlist():
     for item in items:
         track_ids.append(item['track']['id'])
     session['track_ids'] = track_ids
-    session['location'] = location
+    session['location'] = location.get_name() + ', ' + location.get_country()
     session['temp'] = w.get_temperature('fahrenheit')['temp']
     session['time'] = obs.get_reception_time(timeformat='iso')
-    session['status'] = w.get_status()
+    session['status'] = w.get_detailed_status()
     session['dn_code'] = day_night + '-' + str(w.get_weather_code())
     session.modified = True
 
