@@ -10,13 +10,13 @@
     <div class="container">
     <div style="text-align:center;">
         <div class="row">
-        <div class="col-xs-12 col-md-11 col-lg-12">
+        <div class="col-xs-12 col-md-12 col-lg-12">
             <h1>Weather Music</h1>
-            <i class="wi wi-umbrella"></i>
+            <div class="big-icons"><i class="wi wi-umbrella"></i></div>
         </div>
         </div>
         <div class="row">
-        <div class="col-xs-6 col-sm-6 col-md-10" style="margin: 0 auto; float:none;">
+        <div class="col-xs-8 col-sm-6 col-md-5" style="margin: 0 auto; float:none;">
             <form role="form" action="/gen_playlist" method="post">
                 <div class="input-group">
                   <input type="text" class="form-control input-sm" name="location" placeholder="Enter City... (e.g London, GB)" required>
@@ -28,11 +28,11 @@
         </div>
         </div>
         <div class="footer navbar-fixed-bottom">
-        <div class="row row-centered">
-            <p>powered by:</p>
+        <p>powered by:</p>
+        <div class="row row-centered row-low-padding ">
             <div class="spotify-logo">
-            <div class="col-xs-3 col-md-6 col-centered"><img src="/static/img/Spotify_Logo_Gray.svg" class="img-responsive center-block"></div>
-            <div class="col-xs-3 col-md-6 col-centered"><div class = "v-center"><img src="/static/img/OpenWeatherMap_Logo_Gray.svg" class="img-responsive center-block"></div></div>
+            <div class="col-xs-3 col-md-3 col-lg-1 col-centered"><img src="/static/img/Spotify_Logo_Gray.svg" class="img-responsive"></div>
+            <div class="col-xs-3 col-md-3 col-lg-1 col-centered"><img src="/static/img/OpenWeatherMap_Logo_Gray.svg" class="img-responsive vertical-align"></div>
             </div>
         </div>
         </div>
