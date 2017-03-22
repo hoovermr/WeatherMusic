@@ -100,7 +100,7 @@ def get_saved_tracks(sp):
     """get a user's saved tracks playlist"""
     # each loop is 50 tracks
     result_list = []
-    for x in range(0, 4):
+    for x in range(0, 6):
         results = sp.current_user_saved_tracks(limit=50, offset=50*x)
         result_list.append(results)
     return result_list
