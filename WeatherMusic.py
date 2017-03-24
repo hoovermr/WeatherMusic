@@ -6,31 +6,33 @@ import spotipy.oauth2
 import pyowm
 from random import shuffle
 
-# spotipy authorization creds
-client_id = '273c232d912349fe92db1ca0f268d60f'
-client_secret = '4eac1ce5862541c99eb5638045bae2e2'
+# spotify web api authorization credentials
+CLIENT_ID = '273c232d912349fe92db1ca0f268d60f'
+CLIENT_SECRET = '4eac1ce5862541c99eb5638045bae2e2'
 
-# Flask Parameters
+# redirect info
+
 # test
-#CLIENT_SIDE_URL = "http://127.0.0.1"
-#PORT = 5000
-#REDIRECT_URI = "{}:{}/callback".format(CLIENT_SIDE_URL, PORT)
+CLIENT_SIDE_URL = "http://127.0.0.1"
+PORT = 5000
+REDIRECT_URI = "{}:{}/callback".format(CLIENT_SIDE_URL, PORT)
 
 # production
-CLIENT_SIDE_URL = "http://lowcost-env.p5pm3xx92m.us-west-2.elasticbeanstalk.com/"
-REDIRECT_URI = "http://lowcost-env.p5pm3xx92m.us-west-2.elasticbeanstalk.com/callback"
+#CLIENT_SIDE_URL = "http://lowcost-env.p5pm3xx92m.us-west-2.elasticbeanstalk.com/"
+#REDIRECT_URI = "http://lowcost-env.p5pm3xx92m.us-west-2.elasticbeanstalk.com/callback"
 
 # open weather map api creds
 owm = pyowm.OWM('2afa8543802728d0be8e1337cf61cf87')  # hoovermr's default key
 application = Flask(__name__)
 # set the secret key.  keep this really secret:
-application.secret_key = 'A0Zr98j/3yX R~XHH!randomjmN]LWX/,?RT'
+# TODO: randomize this key
+application.secret_key = 'A0Zr98j/3yX R~XHH!419HfFDKJsHF]LWX/,?RT'
 
 
 @application.route('/')
 @application.route('/index')
 def index():
-    """Redirect user to Spotify login/auth."""
+    # redirect user to Spotify login/auth.
     sp_oauth = get_oauth()
     return redirect(sp_oauth.get_authorize_url())
 
@@ -105,17 +107,21 @@ def make_playlist():
 
 
 def get_saved_tracks(sp):
-    """get a user's saved tracks playlist"""
+    # get a user's saved tracks playlist
     # each loop is 50 tracks
     result_list = []
-    for x in range(0, 4):
-        results = sp.current_user_saved_tracks(limit=50, offset=50*x)
-        result_list.append(results)
+    results = sp.current_user_saved_tracks(limit=50, offset=0)
+    result_list.append(results)
+    if results['total'] > 50:
+        upper = (results['total'] - 50) / 50
+        for x in range(1, int(upper)):
+            results = sp.current_user_saved_tracks(limit=50, offset=50*x)
+            result_list.append(results)
     return result_list
 
 
 def get_weather(location):
-    """get weather details like temperature"""
+    # get weather details like temperature
     observation = owm.weather_at_place(location)
     w = observation.get_weather()
     return w, observation
@@ -132,14 +138,23 @@ def get_weather_playlist(sp, factor):
 
     feature_list = []
     for group in chunker(uris, 50):
+        print group
         feature_list.append(sp.audio_features(group))
 
+    print feature_list[0]
     items = []
+    print('feature_list len=' + str(len(feature_list)) + ', result_list len=' + str(len(result_list)))
     # result_list and feature_list are both lists of lists
     for results, features in zip(result_list, feature_list):
         # results['items'] and features are both 50 entries long
+        print('results[items] len=' + str(len(results['items'])) + ', features len=' + str(len(features)))
         for item, feature in zip(results['items'], features):
+            if feature is None:
+                continue
             track = item['track']
+            print(track)
+            print(feature)
+            print('--------')
             # using boundary of 0.1 as a test run
             if factor - 0.1 < feature['valence'] < factor + 0.1:
                 items.append(item)
@@ -149,22 +164,34 @@ def get_weather_playlist(sp, factor):
 
 
 def get_oauth():
-    """Return a Spotipy Oauth2 object."""
-    return spotipy.oauth2.SpotifyOAuth(
-        client_id, client_secret, REDIRECT_URI,
-        scope='user-library-read playlist-modify-public', cache_path=".tokens")
+    # return a Spotipy Oauth2 object.
+    return spotipy.oauth2.SpotifyOAuth(CLIENT_ID, CLIENT_SECRET, REDIRECT_URI,
+                                       scope='user-library-read playlist-modify-public')
 
 
 def get_spotify(auth_token=None):
-    """Return an authenticated Spotify object."""
-    access_token = session['access_token'] if 'access_token' in session else None
+    # return an authenticated Spotify object.
+    if 'access_token' in session:
+        access_token = session['access_token']
+        expires_at = session['expires_at']
+        refresh_token = session['refresh_token']
+    else:
+        access_token = None
+
     oauth = get_oauth()
-    #token_info = oauth.get_cached_token()
-    if not access_token and auth_token:
+    if access_token is None and auth_token:
         token_info = oauth.get_access_token(auth_token)
         session['access_token'] = token_info["access_token"]
+        session['expires_at'] = token_info["expires_at"]
         session.modified = True
         access_token = token_info["access_token"]
+    elif time.now() > expires_at:
+        token_info = oauth.refresh_access_token(refresh_token)
+        access_token = token_info["access_token"]
+        expires_at = token_info["expires_at"]
+        session.modified = True
+
+
     return spotipy.Spotify(access_token)
 
 
