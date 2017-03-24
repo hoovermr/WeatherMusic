@@ -170,7 +170,7 @@ def get_oauth():
 
 
 def get_spotify(auth_token=None):
-    # return an authenticated Spotify object.
+    # return an authenticated Spotify object and store in session.
     if 'access_token' in session:
         access_token = session['access_token']
         expires_at = session['expires_at']
