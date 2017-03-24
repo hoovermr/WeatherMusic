@@ -12,19 +12,19 @@ client_secret = '4eac1ce5862541c99eb5638045bae2e2'
 
 # Flask Parameters
 # test
-#CLIENT_SIDE_URL = "http://127.0.0.1"
-#PORT = 5000
-#REDIRECT_URI = "{}:{}/callback".format(CLIENT_SIDE_URL, PORT)
+CLIENT_SIDE_URL = "http://127.0.0.1"
+PORT = 5000
+REDIRECT_URI = "{}:{}/callback".format(CLIENT_SIDE_URL, PORT)
 
 # production
-CLIENT_SIDE_URL = "http://lowcost-env.p5pm3xx92m.us-west-2.elasticbeanstalk.com/"
-REDIRECT_URI = "http://lowcost-env.p5pm3xx92m.us-west-2.elasticbeanstalk.com/callback"
+#CLIENT_SIDE_URL = "http://lowcost-env.p5pm3xx92m.us-west-2.elasticbeanstalk.com/"
+#REDIRECT_URI = "http://lowcost-env.p5pm3xx92m.us-west-2.elasticbeanstalk.com/callback"
 
 # open weather map api creds
 owm = pyowm.OWM('2afa8543802728d0be8e1337cf61cf87')  # hoovermr's default key
 application = Flask(__name__)
 # set the secret key.  keep this really secret:
-application.secret_key = 'A0Zr98j/3yX R~XHH!jmN]LWX/,?RT'
+application.secret_key = 'A0Zr98j/3yX R~XHH!randomjmN]LWX/,?RT'
 
 
 @application.route('/')
@@ -40,7 +40,8 @@ def callback():
     # This is the route which the Spotify OAuth redirects to.
     # We finish getting an access token here.
     if request.args.get("code"):
-        sp = get_spotify(request.args["code"])
+        session['auth_token'] = request.args["code"]
+        get_spotify(request.args["code"])
 
     return render_template("index.html")
 
@@ -86,8 +87,6 @@ def make_playlist():
     w_time = session.pop('time', None)
     w_status = session.pop('status', None)
     dn_code = session.pop('dn_code', None)
-
-    print(track_ids, location, temp, w_time, w_status, dn_code)
 
     sp = get_spotify()
     user_id = sp.current_user()["id"]
@@ -158,12 +157,15 @@ def get_oauth():
 
 def get_spotify(auth_token=None):
     """Return an authenticated Spotify object."""
+    access_token = session['access_token'] if 'access_token' in session else None
     oauth = get_oauth()
-    token_info = oauth.get_cached_token()
-    if not token_info and auth_token:
+    #token_info = oauth.get_cached_token()
+    if not access_token and auth_token:
         token_info = oauth.get_access_token(auth_token)
-
-    return spotipy.Spotify(token_info["access_token"])
+        session['access_token'] = token_info["access_token"]
+        session.modified = True
+        access_token = token_info["access_token"]
+    return spotipy.Spotify(access_token)
 
 
 def chunker(seq, size):
