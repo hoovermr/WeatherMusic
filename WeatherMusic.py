@@ -11,24 +11,31 @@ client_id = '273c232d912349fe92db1ca0f268d60f'
 client_secret = '4eac1ce5862541c99eb5638045bae2e2'
 
 # Flask Parameters
-CLIENT_SIDE_URL = "http://127.0.0.1"
-PORT = 5000
-REDIRECT_URI = "{}:{}/callback".format(CLIENT_SIDE_URL, PORT)
+# test
+#CLIENT_SIDE_URL = "http://127.0.0.1"
+#PORT = 5000
+#REDIRECT_URI = "{}:{}/callback".format(CLIENT_SIDE_URL, PORT)
+
+# production
+CLIENT_SIDE_URL = "http://lowcost-env.p5pm3xx92m.us-west-2.elasticbeanstalk.com/"
+REDIRECT_URI = "http://lowcost-env.p5pm3xx92m.us-west-2.elasticbeanstalk.com/callback"
 
 # open weather map api creds
 owm = pyowm.OWM('2afa8543802728d0be8e1337cf61cf87')  # hoovermr's default key
-app = Flask(__name__)
+application = Flask(__name__)
+# set the secret key.  keep this really secret:
+application.secret_key = 'A0Zr98j/3yX R~XHH!jmN]LWX/,?RT'
 
 
-@app.route('/')
-@app.route('/index')
+@application.route('/')
+@application.route('/index')
 def index():
     """Redirect user to Spotify login/auth."""
     sp_oauth = get_oauth()
     return redirect(sp_oauth.get_authorize_url())
 
 
-@app.route('/callback', methods=['GET', 'POST'])
+@application.route('/callback', methods=['GET', 'POST'])
 def callback():
     # This is the route which the Spotify OAuth redirects to.
     # We finish getting an access token here.
@@ -38,7 +45,7 @@ def callback():
     return render_template("index.html")
 
 
-@app.route('/gen_playlist', methods=['GET', 'POST'])
+@application.route('/gen_playlist', methods=['GET', 'POST'])
 def gen_playlist():
     if request.form['location']:
         location = request.form['location']
@@ -71,7 +78,7 @@ def gen_playlist():
                            items=items)
 
 
-@app.route('/make_playlist', methods=['GET', 'POST'])
+@application.route('/make_playlist', methods=['GET', 'POST'])
 def make_playlist():
     track_ids = session.pop('track_ids', None)
     location = session.pop('location', None)
@@ -79,6 +86,8 @@ def make_playlist():
     w_time = session.pop('time', None)
     w_status = session.pop('status', None)
     dn_code = session.pop('dn_code', None)
+
+    print(track_ids, location, temp, w_time, w_status, dn_code)
 
     sp = get_spotify()
     user_id = sp.current_user()["id"]
@@ -100,7 +109,7 @@ def get_saved_tracks(sp):
     """get a user's saved tracks playlist"""
     # each loop is 50 tracks
     result_list = []
-    for x in range(0, 6):
+    for x in range(0, 4):
         results = sp.current_user_saved_tracks(limit=50, offset=50*x)
         result_list.append(results)
     return result_list
@@ -135,7 +144,7 @@ def get_weather_playlist(sp, factor):
             # using boundary of 0.1 as a test run
             if factor - 0.1 < feature['valence'] < factor + 0.1:
                 items.append(item)
-                print track['name'] + ' - ' + track['artists'][0]['name'] + ' Valence: ' + str(feature['valence'])
+                #print track['name'] + ' - ' + track['artists'][0]['name'] + ' Valence: ' + str(feature['valence'])
     shuffle(items)
     return items[:20]
 
@@ -161,6 +170,4 @@ def chunker(seq, size):
 
 
 if __name__ == '__main__':
-    # set the secret key.  keep this really secret:
-    app.secret_key = 'A0Zr98j/3yX R~XHH!jmN]LWX/,?RT'
-    app.run(debug=True)
+    application.run(debug=True)
