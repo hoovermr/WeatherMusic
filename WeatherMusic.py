@@ -159,11 +159,9 @@ def get_oauth():
 def get_spotify(auth_token=None):
     """Return an authenticated Spotify object."""
     oauth = get_oauth()
-    #token_info = oauth.get_cached_token()
-    #if not token_info and auth_token:
-
-    # debug: don't cache for now.
-    token_info = oauth.get_access_token(auth_token)
+    token_info = oauth.get_cached_token()
+    if not token_info and auth_token:
+        token_info = oauth.get_access_token(auth_token)
 
     return spotipy.Spotify(token_info["access_token"])
 
