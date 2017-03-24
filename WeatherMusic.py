@@ -13,13 +13,13 @@ CLIENT_SECRET = '4eac1ce5862541c99eb5638045bae2e2'
 # redirect info
 
 # test
-CLIENT_SIDE_URL = "http://127.0.0.1"
-PORT = 5000
-REDIRECT_URI = "{}:{}/callback".format(CLIENT_SIDE_URL, PORT)
+#CLIENT_SIDE_URL = "http://127.0.0.1"
+#PORT = 5000
+#REDIRECT_URI = "{}:{}/callback".format(CLIENT_SIDE_URL, PORT)
 
 # production
-#CLIENT_SIDE_URL = "http://lowcost-env.p5pm3xx92m.us-west-2.elasticbeanstalk.com/"
-#REDIRECT_URI = "http://lowcost-env.p5pm3xx92m.us-west-2.elasticbeanstalk.com/callback"
+CLIENT_SIDE_URL = "http://lowcost-env.p5pm3xx92m.us-west-2.elasticbeanstalk.com/"
+REDIRECT_URI = "http://lowcost-env.p5pm3xx92m.us-west-2.elasticbeanstalk.com/callback"
 
 # open weather map api creds
 owm = pyowm.OWM('2afa8543802728d0be8e1337cf61cf87')  # hoovermr's default key
@@ -179,18 +179,18 @@ def get_spotify(auth_token=None):
         access_token = None
 
     oauth = get_oauth()
+    token_info = None
     if access_token is None and auth_token:
         token_info = oauth.get_access_token(auth_token)
+    elif time.time() > expires_at:
+        token_info = oauth.refresh_access_token(refresh_token)
+
+    if token_info is not None:
         session['access_token'] = token_info["access_token"]
         session['expires_at'] = token_info["expires_at"]
+        session['refresh_token'] = token_info["refresh_token"]
         session.modified = True
         access_token = token_info["access_token"]
-    elif time.now() > expires_at:
-        token_info = oauth.refresh_access_token(refresh_token)
-        access_token = token_info["access_token"]
-        expires_at = token_info["expires_at"]
-        session.modified = True
-
 
     return spotipy.Spotify(access_token)
 
