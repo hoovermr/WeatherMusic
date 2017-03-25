@@ -1,10 +1,12 @@
 # -*- coding: utf-8 -*-
 from flask import Flask, render_template, redirect, request, session
+from random import shuffle
+from timezonefinder import TimezoneFinder
+from pytz import timezone
 import time
 import spotipy
 import spotipy.oauth2
 import pyowm
-from random import shuffle
 
 # spotify web api authorization credentials
 CLIENT_ID = '273c232d912349fe92db1ca0f268d60f'
@@ -13,13 +15,13 @@ CLIENT_SECRET = '4eac1ce5862541c99eb5638045bae2e2'
 # redirect info
 
 # test
-#CLIENT_SIDE_URL = "http://127.0.0.1"
-#PORT = 5000
-#REDIRECT_URI = "{}:{}/callback".format(CLIENT_SIDE_URL, PORT)
+CLIENT_SIDE_URL = "http://127.0.0.1"
+PORT = 5000
+REDIRECT_URI = "{}:{}/callback".format(CLIENT_SIDE_URL, PORT)
 
 # production
-CLIENT_SIDE_URL = "http://lowcost-env.p5pm3xx92m.us-west-2.elasticbeanstalk.com/"
-REDIRECT_URI = "http://lowcost-env.p5pm3xx92m.us-west-2.elasticbeanstalk.com/callback"
+#CLIENT_SIDE_URL = "http://lowcost-env.p5pm3xx92m.us-west-2.elasticbeanstalk.com/"
+#REDIRECT_URI = "http://lowcost-env.p5pm3xx92m.us-west-2.elasticbeanstalk.com/callback"
 
 # open weather map api creds
 owm = pyowm.OWM('2afa8543802728d0be8e1337cf61cf87')  # hoovermr's default key
@@ -54,9 +56,16 @@ def gen_playlist():
         location = request.form['location']
 
     sp = get_spotify()
+    tf = TimezoneFinder()
 
     w, obs = get_weather(location)
     location = obs.get_location()
+    tz_name = tf.timezone_at(lng=location.get_lon(), lat=location.get_lat())
+    tz = timezone(tz_name)
+    naive_datetime = obs.get_reception_time(timeformat='date')
+    naive_datetime_astz = naive_datetime.astimezone(tz)
+    fmt1 = '%Y-%m-%d %H:%M %Z'
+
     factor = w.get_temperature('fahrenheit')['temp'] / 100
     day_night = 'night' if w.get_reference_time() > w.get_sunset_time() else 'day'
 
@@ -69,7 +78,7 @@ def gen_playlist():
     session['track_ids'] = track_ids
     session['location'] = location.get_name() + ', ' + location.get_country()
     session['temp'] = w.get_temperature('fahrenheit')['temp']
-    session['time'] = obs.get_reception_time(timeformat='iso')
+    session['time'] = naive_datetime_astz.strftime(fmt1)
     session['status'] = w.get_detailed_status()
     session['dn_code'] = day_night + '-' + str(w.get_weather_code())
     session.modified = True
@@ -78,7 +87,8 @@ def gen_playlist():
                            w=w,
                            obs=obs,
                            day_night=day_night,
-                           items=items)
+                           items=items,
+                           datetime=naive_datetime_astz.strftime(fmt1))
 
 
 @application.route('/make_playlist', methods=['GET', 'POST'])
@@ -152,9 +162,6 @@ def get_weather_playlist(sp, factor):
             if feature is None:
                 continue
             track = item['track']
-            print(track)
-            print(feature)
-            print('--------')
             # using boundary of 0.1 as a test run
             if factor - 0.1 < feature['valence'] < factor + 0.1:
                 items.append(item)

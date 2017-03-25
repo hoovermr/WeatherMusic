@@ -9,11 +9,11 @@
     {% block content %}
     <div style="text-align:center">
     <h1>{{ location }}</h1>
-    <h1>{{ time }} UTC</h1>
-    <h1>{{ temp }} °F, {{ status }}</h1>
+    <h1>{{ time }}</h1>
+    <h1>{{ temp }} °F, {{ status.title() }}</h1>
     <div class="big-icons"><i class="wi wi-owm-{{ dn_code }}"></i></div>
     <a href={{ playlist_uri }} class="btn btn-primary">Open In Spotify!</a>
-    <br>
+    <br><br>
     <form role="form" action="/index" method="get">
         <button class="btn btn-primary" type="submit">Again!</button>
     </form>

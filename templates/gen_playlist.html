@@ -9,8 +9,8 @@
     {% block content %}
     <div style="text-align:center">
     <h1>{{ obs.get_location().get_name() }}, {{ obs.get_location().get_country() }}</h1>
-    <h1>{{ obs.get_reception_time(timeformat='iso') }} UTC</h1>
-    <h1>{{ w.get_temperature('fahrenheit')['temp'] }} °F, {{ w.get_detailed_status() }}</h1>
+    <h1>{{ datetime }}</h1>
+    <h1>{{ w.get_temperature('fahrenheit')['temp'] }} °F, {{ w.get_detailed_status().title() }}</h1>
     <div class="big-icons"><i class="wi wi-owm-{{ day_night }}-{{ w.get_weather_code() }}"></i></div>
     <form role="form" action="/make_playlist" method="post">
         <button class="btn btn-primary" type="submit">Export To Spotify!</button>

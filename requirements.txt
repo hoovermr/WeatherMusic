@@ -31,3 +31,4 @@ Whoosh==2.7.4
 WTForms==2.1
 spotipy==2.4.4
 pyowm==2.6.1
+timezonefinder==1.5.7
