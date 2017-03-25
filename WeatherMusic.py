@@ -3,6 +3,7 @@ from flask import Flask, render_template, redirect, request, session
 from random import shuffle
 from timezonefinder import TimezoneFinder
 from pytz import timezone
+import json
 import os
 import time
 import spotipy
@@ -35,6 +36,7 @@ application.secret_key = os.urandom(24)
 @application.route('/index')
 def index():
     # redirect user to Spotify login/auth.
+    print 'redirect'
     sp_oauth = get_oauth()
     return redirect(sp_oauth.get_authorize_url())
 
@@ -50,27 +52,35 @@ def callback():
     return render_template("index.html")
 
 
+def get_loc_naive_datetime(obs):
+    loc = obs.get_location()
+    tf = TimezoneFinder()
+    tz_name = tf.timezone_at(lng=loc.get_lon(), lat=loc.get_lat())
+    tz = timezone(tz_name)
+    naive_datetime = obs.get_reception_time(timeformat='date')
+
+    return naive_datetime.astimezone(tz)
+
+
 @application.route('/gen_playlist', methods=['GET', 'POST'])
 def gen_playlist():
     if request.form['location']:
         location = request.form['location']
 
-    sp = get_spotify()
-    tf = TimezoneFinder()
+    try:
+        sp = get_spotify()
+    except KeyError:
+        return index()
 
     w, obs = get_weather(location)
     location = obs.get_location()
-    tz_name = tf.timezone_at(lng=location.get_lon(), lat=location.get_lat())
-    tz = timezone(tz_name)
-    naive_datetime = obs.get_reception_time(timeformat='date')
-    naive_datetime_astz = naive_datetime.astimezone(tz)
-    fmt1 = '%Y-%m-%d %H:%M %Z'
+    naive_datetime_astz = get_loc_naive_datetime(obs)
 
     factor = w.get_temperature('fahrenheit')['temp'] / 100
     day_night = 'night' if w.get_reference_time() > w.get_sunset_time() else 'day'
 
     # match up the valence with the temperature
-    items = get_weather_playlist(sp, factor)
+    items = get_weather_playlist(sp, factor, obs)
 
     track_ids = []
     for item in items:
@@ -78,7 +88,7 @@ def gen_playlist():
     session['track_ids'] = track_ids
     session['location'] = location.get_name() + ', ' + location.get_country()
     session['temp'] = w.get_temperature('fahrenheit')['temp']
-    session['time'] = naive_datetime_astz.strftime(fmt1)
+    session['time'] = naive_datetime_astz.strftime('%Y-%m-%d %H:%M %Z')
     session['status'] = w.get_detailed_status()
     session['dn_code'] = day_night + '-' + str(w.get_weather_code())
     session.modified = True
@@ -88,7 +98,7 @@ def gen_playlist():
                            obs=obs,
                            day_night=day_night,
                            items=items,
-                           datetime=naive_datetime_astz.strftime(fmt1))
+                           datetime=naive_datetime_astz.strftime('%Y-%m-%d %H:%M %Z'))
 
 
 @application.route('/make_playlist', methods=['GET', 'POST'])
@@ -116,9 +126,8 @@ def make_playlist():
                            playlist_uri=playlist['uri'])
 
 
-def get_saved_tracks(sp):
+def get_saved_tracks(sp, obs):
     # get a user's saved tracks playlist
-    # each loop is 50 tracks
     result_list = []
     results = sp.current_user_saved_tracks(limit=50, offset=0)
     result_list.append(results)
@@ -127,6 +136,16 @@ def get_saved_tracks(sp):
         for x in range(1, int(upper)):
             results = sp.current_user_saved_tracks(limit=50, offset=50*x)
             result_list.append(results)
+    # if user doesn't have enough tracks, use a sp featured playlist
+    elif results['total'] < 20:
+        naive_datetime_astz = get_loc_naive_datetime(obs)
+        response = sp.featured_playlists(locale=obs.get_location().get_country(),
+                                         limit=5, timestamp=naive_datetime_astz.isoformat())
+        #print(len(response['playlists']['items']))
+        #print json.dumps(response['playlists']['items'])
+        for x in range(0, len(response['playlists']['items'])):
+            tracks = sp.user_playlist_tracks(user='spotify', playlist_id=response['playlists']['items'][x]['id'], limit=50)
+            result_list.append(tracks)
     return result_list
 
 
@@ -137,9 +156,9 @@ def get_weather(location):
     return w, observation
 
 
-def get_weather_playlist(sp, factor):
+def get_weather_playlist(sp, factor, obs):
     # get last X saved tracks
-    result_list = get_saved_tracks(sp)
+    result_list = get_saved_tracks(sp, obs)
 
     uris = []
     for results in result_list:
@@ -147,6 +166,7 @@ def get_weather_playlist(sp, factor):
             uris.append(item['track']['uri'])
 
     feature_list = []
+    # TODO: chunker needs to work on dynamic lengths
     for group in chunker(uris, 50):
         print group
         feature_list.append(sp.audio_features(group))
@@ -179,15 +199,19 @@ def get_oauth():
 def get_spotify(auth_token=None):
     # return an authenticated Spotify object and store in session.
     if 'access_token' in session:
+        print 'access_token exists'
         access_token = session['access_token']
         expires_at = session['expires_at']
         refresh_token = session['refresh_token']
     else:
+        print 'access_token does not exist'
         access_token = None
 
     oauth = get_oauth()
     token_info = None
-    if access_token is None and auth_token:
+    if access_token is None and auth_token is None:
+        raise KeyError('no authentication present')
+    elif access_token is None and auth_token:
         token_info = oauth.get_access_token(auth_token)
     elif time.time() > expires_at:
         token_info = oauth.refresh_access_token(refresh_token)
@@ -198,6 +222,8 @@ def get_spotify(auth_token=None):
         session['refresh_token'] = token_info["refresh_token"]
         session.modified = True
         access_token = token_info["access_token"]
+
+    print token_info
 
     return spotipy.Spotify(access_token)
 

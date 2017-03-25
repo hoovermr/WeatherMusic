@@ -24,10 +24,10 @@
             <tbody>
                 {% for item in items %}
                 <td>
-                    <td><h4>{{ loop.index0+1 }}</h4></td>
+                    <td>{{ loop.index0+1 }}</td>
                     <td><audio id="track{{ loop.index0+1 }}" preload="none" source src="{{ item['track']['preview_url'] }}" type='audio/mpeg'></audio>
-                        <button type="button" class="btn btn-default" onClick="EvalSound('track{{ loop.index0+1 }}', this)"><span class="glyphicon glyphicon-play"></span></button></td>
-                    <td><h4>{{ item['track']['name'] }} - {{ item['track']['artists'][0]['name'] }}</h4></td>
+                        <button type="button" class="btn btn-link btn-xs" onClick="EvalSound('track{{ loop.index0+1 }}', this)"><span class="glyphicon glyphicon-play"></span></button></td>
+                    <td>{{ item['track']['name'] }} - {{ item['track']['artists'][0]['name'] }}</td>
                 </tr>
                 {% endfor %}
             </tbody>
