@@ -15,13 +15,13 @@ CLIENT_SECRET = '4eac1ce5862541c99eb5638045bae2e2'
 # redirect info
 
 # test
-CLIENT_SIDE_URL = "http://127.0.0.1"
-PORT = 5000
-REDIRECT_URI = "{}:{}/callback".format(CLIENT_SIDE_URL, PORT)
+#CLIENT_SIDE_URL = "http://127.0.0.1"
+#PORT = 5000
+#REDIRECT_URI = "{}:{}/callback".format(CLIENT_SIDE_URL, PORT)
 
 # production
-#CLIENT_SIDE_URL = "http://lowcost-env.p5pm3xx92m.us-west-2.elasticbeanstalk.com/"
-#REDIRECT_URI = "http://lowcost-env.p5pm3xx92m.us-west-2.elasticbeanstalk.com/callback"
+CLIENT_SIDE_URL = "http://lowcost-env.p5pm3xx92m.us-west-2.elasticbeanstalk.com/"
+REDIRECT_URI = "http://lowcost-env.p5pm3xx92m.us-west-2.elasticbeanstalk.com/callback"
 
 # open weather map api creds
 owm = pyowm.OWM('2afa8543802728d0be8e1337cf61cf87')  # hoovermr's default key
