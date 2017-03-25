@@ -3,6 +3,7 @@ from flask import Flask, render_template, redirect, request, session
 from random import shuffle
 from timezonefinder import TimezoneFinder
 from pytz import timezone
+import os
 import time
 import spotipy
 import spotipy.oauth2
@@ -27,8 +28,7 @@ REDIRECT_URI = "http://lowcost-env.p5pm3xx92m.us-west-2.elasticbeanstalk.com/cal
 owm = pyowm.OWM('2afa8543802728d0be8e1337cf61cf87')  # hoovermr's default key
 application = Flask(__name__)
 # set the secret key.  keep this really secret:
-# TODO: randomize this key
-application.secret_key = 'A0Zr98j/3yX R~XHH!419HfFDKJsHF]LWX/,?RT'
+application.secret_key = os.urandom(24)
 
 
 @application.route('/')
