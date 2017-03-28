@@ -3,7 +3,7 @@ from flask import Flask, render_template, redirect, request, session
 from random import shuffle
 from timezonefinder import TimezoneFinder
 from pytz import timezone
-import json
+# import json
 import os
 import time
 import spotipy
@@ -36,7 +36,6 @@ application.secret_key = os.urandom(24)
 @application.route('/index')
 def index():
     # redirect user to Spotify login/auth.
-    print 'redirect'
     sp_oauth = get_oauth()
     return redirect(sp_oauth.get_authorize_url())
 
@@ -47,7 +46,10 @@ def callback():
     # We finish getting an access token here.
     if request.args.get("code"):
         session['auth_token'] = request.args["code"]
-        get_spotify(request.args["code"])
+        try:
+            get_spotify(request.args["code"])
+        except KeyError:
+            return index() # should never happen
 
     return render_template("index.html")
 
@@ -88,8 +90,7 @@ def gen_playlist():
     session['track_ids'] = track_ids
     session['location'] = location.get_name() + ', ' + location.get_country()
     session['temp'] = w.get_temperature('fahrenheit')['temp']
-    session['time'] = naive_datetime_astz.strftime('%Y-%m-%d %H:%M %Z')
-    session['status'] = w.get_detailed_status()
+    session['time'] = naive_datetime_astz.strftime('%I:%M %p')
     session['dn_code'] = day_night + '-' + str(w.get_weather_code())
     session.modified = True
 
@@ -98,7 +99,7 @@ def gen_playlist():
                            obs=obs,
                            day_night=day_night,
                            items=items,
-                           datetime=naive_datetime_astz.strftime('%Y-%m-%d %H:%M %Z'))
+                           datetime=naive_datetime_astz.strftime('%I:%M %p'))
 
 
 @application.route('/make_playlist', methods=['GET', 'POST'])
@@ -107,10 +108,12 @@ def make_playlist():
     location = session.pop('location', None)
     temp = session.pop('temp', None)
     w_time = session.pop('time', None)
-    w_status = session.pop('status', None)
     dn_code = session.pop('dn_code', None)
 
-    sp = get_spotify()
+    try:
+        sp = get_spotify()
+    except KeyError:
+        return index()
     user_id = sp.current_user()["id"]
 
     playlist_name = str("{0:.0f}".format(temp)) + unicode(' °F ', 'utf-8') + location + ' ' + time.strftime("%d/%m/%Y")
@@ -121,7 +124,6 @@ def make_playlist():
                            location=location,
                            temp=temp,
                            time=w_time,
-                           status=w_status,
                            dn_code=dn_code,
                            playlist_uri=playlist['uri'])
 
@@ -168,16 +170,15 @@ def get_weather_playlist(sp, factor, obs):
     feature_list = []
     # TODO: chunker needs to work on dynamic lengths
     for group in chunker(uris, 50):
-        print group
         feature_list.append(sp.audio_features(group))
 
-    print feature_list[0]
+    #print feature_list[0]
     items = []
-    print('feature_list len=' + str(len(feature_list)) + ', result_list len=' + str(len(result_list)))
+    #print('feature_list len=' + str(len(feature_list)) + ', result_list len=' + str(len(result_list)))
     # result_list and feature_list are both lists of lists
     for results, features in zip(result_list, feature_list):
         # results['items'] and features are both 50 entries long
-        print('results[items] len=' + str(len(results['items'])) + ', features len=' + str(len(features)))
+        #print('results[items] len=' + str(len(results['items'])) + ', features len=' + str(len(features)))
         for item, feature in zip(results['items'], features):
             if feature is None:
                 continue
@@ -199,12 +200,10 @@ def get_oauth():
 def get_spotify(auth_token=None):
     # return an authenticated Spotify object and store in session.
     if 'access_token' in session:
-        print 'access_token exists'
         access_token = session['access_token']
         expires_at = session['expires_at']
         refresh_token = session['refresh_token']
     else:
-        print 'access_token does not exist'
         access_token = None
 
     oauth = get_oauth()
@@ -222,8 +221,6 @@ def get_spotify(auth_token=None):
         session['refresh_token'] = token_info["refresh_token"]
         session.modified = True
         access_token = token_info["access_token"]
-
-    print token_info
 
     return spotipy.Spotify(access_token)
 

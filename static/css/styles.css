@@ -19,6 +19,13 @@
     margin-right:-4px;
 }
 
+.col-centered-views {
+    display:inline-block;
+    float:none;
+    /* inline-block space fix */
+    margin-right:-4px;
+}
+
 .row-low-padding [class*="col-"] {
     padding-left: 2px !important;
     padding-right: 2px !important;
@@ -51,10 +58,11 @@
 
 /* Medium Devices, Desktops */
 @media only screen and (min-width : 992px) {
-  .big-icons{font-size:397px;}
+    .big-icons{font-size:397px;}
 }
 
 /* Large Devices, Wide Screens */
 @media only screen and (min-width : 1200px) {
-  .big-icons{font-size:240px;}
+    .big-icons{font-size:240px;}
+
 }

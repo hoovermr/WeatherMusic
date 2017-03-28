@@ -9,8 +9,7 @@
     {% block content %}
     <div style="text-align:center">
     <h1>{{ location }}</h1>
-    <h1>{{ time }}</h1>
-    <h1>{{ temp }} °F, {{ status.title() }}</h1>
+    <h1>{{ time }}, {{ temp }} °F</h1>
     <div class="big-icons"><i class="wi wi-owm-{{ dn_code }}"></i></div>
     <a href={{ playlist_uri }} class="btn btn-primary">Open In Spotify!</a>
     <br><br>
