@@ -117,7 +117,7 @@ def make_playlist():
         return index()
     user_id = sp.current_user()["id"]
 
-    playlist_name = location + ' - ' + str("{0:.0f}".format(temp)) + unicode(' °F ', 'utf-8') + w_status.upper()
+    playlist_name = location + ' - ' + str("{0:.0f}".format(temp)) + unicode(' °F ', 'utf-8') + w_status.title()
     playlist = sp.user_playlist_create(user_id, playlist_name)
     sp.user_playlist_add_tracks(user_id, playlist['id'], track_ids)
 
