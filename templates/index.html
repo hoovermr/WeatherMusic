@@ -27,6 +27,12 @@
                 </div>
             </form>
         </div>
+        {% if err == "loc_err" %}
+        <small>We cannot find that location. Try entering a new one with format: *city*,*cnt_code*</small>
+        {% endif %}
+        {% if err == "auth_err" %}
+        <small>token error</small>
+        {% endif %}
         </div>
         <div class="footer navbar-fixed-bottom">
         <!-- Button trigger modal -->

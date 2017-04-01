@@ -3,38 +3,36 @@ from flask import Flask, render_template, redirect, request, session
 from random import shuffle
 from timezonefinder import TimezoneFinder
 from pytz import timezone
-# import json
 import os
 import time
 import spotipy
 import spotipy.oauth2
 import pyowm
+import json
+
 
 # spotify web api authorization credentials
 CLIENT_ID = '273c232d912349fe92db1ca0f268d60f'
 CLIENT_SECRET = '4eac1ce5862541c99eb5638045bae2e2'
 
-# redirect info
-
-# test
+# test redirect
 #CLIENT_SIDE_URL = "http://127.0.0.1"
 #PORT = 5000
 #REDIRECT_URI = "{}:{}/callback".format(CLIENT_SIDE_URL, PORT)
 
-# production
+# production redirect
 CLIENT_SIDE_URL = "http://lowcost-env.p5pm3xx92m.us-west-2.elasticbeanstalk.com/"
 REDIRECT_URI = "http://lowcost-env.p5pm3xx92m.us-west-2.elasticbeanstalk.com/callback"
 
 # open weather map api creds
 owm = pyowm.OWM('2afa8543802728d0be8e1337cf61cf87')  # hoovermr's default key
 application = Flask(__name__)
-# set the secret key.  keep this really secret:
 application.secret_key = os.urandom(24)
 
 
 @application.route('/')
 @application.route('/index')
-def index():
+def index(err=None):
     # redirect user to Spotify login/auth.
     sp_oauth = get_oauth()
     return redirect(sp_oauth.get_authorize_url())
@@ -48,38 +46,30 @@ def callback():
         session['auth_token'] = request.args["code"]
         try:
             get_spotify(request.args["code"])
+            err = None
         except KeyError:
-            return index()  # should never happen
+            err = 'auth_err'
 
-    return render_template("index.html")
-
-
-def get_loc_naive_datetime(obs):
-    loc = obs.get_location()
-    tf = TimezoneFinder()
-    tz_name = tf.timezone_at(lng=loc.get_lon(), lat=loc.get_lat())
-    tz = timezone(tz_name)
-    naive_datetime = obs.get_reception_time(timeformat='date')
-
-    return naive_datetime.astimezone(tz)
+    return render_template("index.html", err=err)
 
 
 @application.route('/gen_playlist', methods=['GET', 'POST'])
 def gen_playlist():
     if request.form['location']:
         f_location = request.form['location']
-
     try:
         sp = get_spotify()
-    except KeyError:
-        return index()
+    except KeyError as e:
+        print e
+        return index(err='auth_err')
 
-    w, obs, loc = get_weather(f_location)
+    w, obs, loc, err = get_weather(f_location)
+    if err is not None:
+        return render_template("index.html", err=err)
+
     naive_datetime_astz = get_loc_naive_datetime(obs)
-
     factor = w.get_temperature('fahrenheit')['temp'] / 100
     day_night = 'night' if w.get_reference_time() > w.get_sunset_time() else 'day'
-
     items = get_weather_playlist(sp, factor, obs)
 
     track_ids = []
@@ -114,7 +104,7 @@ def make_playlist():
     try:
         sp = get_spotify()
     except KeyError:
-        return index()
+        return index(err='auth_err')
     user_id = sp.current_user()["id"]
 
     playlist_name = location + ' - ' + str("{0:.0f}".format(temp)) + unicode(' °F ', 'utf-8') + w_status.title()
@@ -127,6 +117,15 @@ def make_playlist():
                            time=w_time,
                            dn_code=dn_code,
                            playlist_uri=playlist['uri'])
+
+
+def get_loc_naive_datetime(obs):
+    loc = obs.get_location()
+    tf = TimezoneFinder()
+    tz_name = tf.timezone_at(lng=loc.get_lon(), lat=loc.get_lat())
+    tz = timezone(tz_name)
+    naive_datetime = obs.get_reception_time(timeformat='date')
+    return naive_datetime.astimezone(tz)
 
 
 def get_saved_tracks(sp, obs):
@@ -152,10 +151,20 @@ def get_saved_tracks(sp, obs):
 
 def get_weather(f_loc):
     # get pyowm weather object
-    obs = owm.weather_at_place(f_loc)
-    w = obs.get_weather()
-    loc = obs.get_location()
-    return w, obs, loc
+    try:
+        obs = owm.weather_at_place(f_loc)
+        w = obs.get_weather()
+        loc = obs.get_location()
+        err = None
+        return w, obs, loc, err
+    except pyowm.exceptions.not_found_error.NotFoundError as e:
+        print e
+        err = 'loc_err'
+        return None, None, None, err
+    except pyowm.exceptions.api_call_error.BadGatewayError as e:
+        print e
+        err = 'loc_err'
+        return None, None, None, err
 
 
 def get_weather_playlist(sp, factor, obs):
@@ -179,10 +188,9 @@ def get_weather_playlist(sp, factor, obs):
                 continue
             track = item['track']
             # using boundary of 0.1 as a test run
-            # TODO:
             if factor - 0.1 < feature['valence'] < factor + 0.1:
                 items.append(item)
-                #print track['name'] + ' - ' + track['artists'][0]['name'] + ' Valence: ' + str(feature['valence'])
+                # print track['name'] + ' - ' + track['artists'][0]['name'] + ' Valence: ' + str(feature['valence'])
     shuffle(items)
     return items[:20]
 
@@ -196,30 +204,35 @@ def get_oauth():
 def get_spotify(auth_token=None):
     # TODO: find a better way to store tokens
     # return an authenticated Spotify object and store in session.
+    token_info = {}
     if 'access_token' in session:
-        access_token = session['access_token']
-        expires_at = session['expires_at']
-        refresh_token = session['refresh_token']
+        token_info["access_token"] = session['access_token']
+        token_info["expires_at"] = session['expires_at']
+        token_info["refresh_token"] = session['refresh_token']
     else:
-        access_token = None
+        token_info["access_token"], token_info["expires_at"], token_info["refresh_token"] = None, None, None
 
     oauth = get_oauth()
-    token_info = None
-    if access_token is None and auth_token is None:
-        raise KeyError('no authentication present')
-    elif access_token is None and auth_token:
-        token_info = oauth.get_access_token(auth_token)
-    elif time.time() > expires_at:
-        token_info = oauth.refresh_access_token(refresh_token)
+    if token_info["access_token"] is None:
+        if auth_token is None:
+            raise KeyError('no authentication token present')
+        else:
+            try:
+                token_info = oauth.get_access_token(auth_token)
+            except spotipy.oauth2.SpotifyOauthError as e:
+                print e
 
-    if token_info is not None:
+    if token_info["expires_at"] is not None:
+        if time.time() > token_info["expires_at"]:
+            print 'refresh stale token ' + time.time() + 'expired: ' + token_info["expires_at"]
+            token_info = oauth.refresh_access_token(token_info["refresh_token"])
+
+    if bool(token_info) is True:
         session['access_token'] = token_info["access_token"]
         session['expires_at'] = token_info["expires_at"]
         session['refresh_token'] = token_info["refresh_token"]
         session.modified = True
-        access_token = token_info["access_token"]
-
-    return spotipy.Spotify(access_token)
+    return spotipy.Spotify(token_info["access_token"])
 
 
 def chunker(seq, size):
