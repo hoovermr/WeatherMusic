@@ -24,8 +24,8 @@ CLIENT_SECRET = '4eac1ce5862541c99eb5638045bae2e2'
 # CLIENT_SIDE_URL = "http://lowcost-env.p5pm3xx92m.us-west-2.elasticbeanstalk.com/"
 # REDIRECT_URI = "http://lowcost-env.p5pm3xx92m.us-west-2.elasticbeanstalk.com/callback"
 
-CLIENT_SIDE_URL = 'http://LowCost-env.ifzbsehtfp.us-east-2.elasticbeanstalk.com/'
-REDIRECT_URI = 'http://LowCost-env.ifzbsehtfp.us-east-2.elasticbeanstalk.com/callback'
+CLIENT_SIDE_URL = 'http://todaysoundslike.me'
+REDIRECT_URI = 'http://todaysoundslike.me/callback'
 
 # open weather map api creds
 owm = pyowm.OWM('2afa8543802728d0be8e1337cf61cf87')  # hoovermr's default key
