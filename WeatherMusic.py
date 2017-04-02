@@ -16,9 +16,9 @@ CLIENT_ID = '273c232d912349fe92db1ca0f268d60f'
 CLIENT_SECRET = '4eac1ce5862541c99eb5638045bae2e2'
 
 # test redirect
-#CLIENT_SIDE_URL = "http://127.0.0.1"
-#PORT = 5000
-#REDIRECT_URI = "{}:{}/callback".format(CLIENT_SIDE_URL, PORT)
+# CLIENT_SIDE_URL = "http://127.0.0.1"
+# PORT = 5000
+# REDIRECT_URI = "{}:{}/callback".format(CLIENT_SIDE_URL, PORT)
 
 # production redirect
 CLIENT_SIDE_URL = 'http://todaysoundslike.me'
@@ -233,7 +233,7 @@ def get_spotify(auth_token=None):
 
     if token_info["expires_at"] is not None:
         if time.time() > token_info["expires_at"]:
-            print 'refresh stale token ' + time.time() + 'expired: ' + token_info["expires_at"]
+            print 'refresh stale token ' + str(time.time()) + 'expired: ' + str(token_info["expires_at"])
             token_info = oauth.refresh_access_token(token_info["refresh_token"])
 
     if bool(token_info) is True:
