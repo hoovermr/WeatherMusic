@@ -21,8 +21,11 @@ CLIENT_SECRET = '4eac1ce5862541c99eb5638045bae2e2'
 #REDIRECT_URI = "{}:{}/callback".format(CLIENT_SIDE_URL, PORT)
 
 # production redirect
-CLIENT_SIDE_URL = "http://lowcost-env.p5pm3xx92m.us-west-2.elasticbeanstalk.com/"
-REDIRECT_URI = "http://lowcost-env.p5pm3xx92m.us-west-2.elasticbeanstalk.com/callback"
+# CLIENT_SIDE_URL = "http://lowcost-env.p5pm3xx92m.us-west-2.elasticbeanstalk.com/"
+# REDIRECT_URI = "http://lowcost-env.p5pm3xx92m.us-west-2.elasticbeanstalk.com/callback"
+
+CLIENT_SIDE_URL = 'http://LowCost-env.ifzbsehtfp.us-east-2.elasticbeanstalk.com/'
+REDIRECT_URI = 'http://LowCost-env.ifzbsehtfp.us-east-2.elasticbeanstalk.com/callback'
 
 # open weather map api creds
 owm = pyowm.OWM('2afa8543802728d0be8e1337cf61cf87')  # hoovermr's default key
@@ -69,6 +72,10 @@ def gen_playlist():
 
     naive_datetime_astz = get_loc_naive_datetime(obs)
     factor = w.get_temperature('fahrenheit')['temp'] / 100
+    if factor > 1:
+        factor = 0.95
+    elif factor < 0:
+        factor = 0.05
     day_night = 'night' if w.get_reference_time() > w.get_sunset_time() else 'day'
     items = get_weather_playlist(sp, factor, obs)
 
@@ -135,7 +142,10 @@ def get_saved_tracks(sp, obs):
     result_list.append(results)
     if results['total'] > 50:
         upper = (results['total'] - 50) / 50
-        for x in range(1, int(upper)):
+        # max out at 500 tracks
+        if upper > 10:
+            upper = 10
+        for x in range(1, int(upper) + 1):
             results = sp.current_user_saved_tracks(limit=50, offset=50*x)
             result_list.append(results)
     # if user doesn't have enough tracks, use a sp featured playlist
@@ -175,6 +185,7 @@ def get_weather_playlist(sp, factor, obs):
         for item in results['items']:
             uris.append(item['track']['uri'])
 
+    #print 'number of songs queried: ' + str(len(uris))
     feature_list = []
     # TODO: chunker needs to work on dynamic lengths
     for group in chunker(uris, 50):
@@ -188,9 +199,10 @@ def get_weather_playlist(sp, factor, obs):
                 continue
             track = item['track']
             # using boundary of 0.1 as a test run
-            if factor - 0.1 < feature['valence'] < factor + 0.1:
+            if factor - 0.05 < feature['valence'] < factor + 0.05:
                 items.append(item)
-                # print track['name'] + ' - ' + track['artists'][0]['name'] + ' Valence: ' + str(feature['valence'])
+                #print track['name'] + ' - ' + track['artists'][0]['name'] + ' Valence: ' + str(feature['valence'])
+    #print 'number of items after mapping: ' + str(len(items))
     shuffle(items)
     return items[:20]
 
