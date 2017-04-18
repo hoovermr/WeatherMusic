@@ -15,11 +15,6 @@
         <div class="col-xs-12 col-md-12 col-lg-12">
             <h1>Today Sounds Like...</h1>
             <div class="big-icons"><i class="wi wi-umbrella"></i></div>
-            <!--<small>show me something:</small>
-            <div class="btn-group btn-toggle">
-                <button class="btn btn-xs btn-primary active">Familiar</button>
-                <button class="btn btn-xs btn-default">New</button>
-            </div>-->
         </div>
         </div>
         <div class="row">
@@ -80,27 +75,6 @@
             </div>
         </div>
     </div>
-    <script>
-    $('.btn-toggle').click(function() {
-    $(this).find('.btn').toggleClass('active');
-
-    if ($(this).find('.btn-primary').size()>0) {
-    	$(this).find('.btn').toggleClass('btn-primary');
-    }
-    if ($(this).find('.btn-danger').size()>0) {
-    	$(this).find('.btn').toggleClass('btn-danger');
-    }
-    if ($(this).find('.btn-success').size()>0) {
-    	$(this).find('.btn').toggleClass('btn-success');
-    }
-    if ($(this).find('.btn-info').size()>0) {
-    	$(this).find('.btn').toggleClass('btn-info');
-    }
-
-    $(this).find('.btn').toggleClass('btn-default');
-
-    });
-    </script>
     {% endblock %}
 </body>
 </html>
