@@ -3,17 +3,23 @@
 <head>
     <link rel="shortcut icon"  type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}"/>
     <meta charset="UTF-8">
-    <title>Weather Music</title>
+    <title>Today Sounds Like</title>
 </head>
 <body>
     {% extends "base.html" %}
     {% block content %}
+    <link href="/static/css/navbar.css" rel="stylesheet">
     <div class="container">
     <div style="text-align:center;">
         <div class="row">
         <div class="col-xs-12 col-md-12 col-lg-12">
             <h1>Today Sounds Like...</h1>
             <div class="big-icons"><i class="wi wi-umbrella"></i></div>
+            <!--<small>show me something:</small>
+            <div class="btn-group btn-toggle">
+                <button class="btn btn-xs btn-primary active">Familiar</button>
+                <button class="btn btn-xs btn-default">New</button>
+            </div>-->
         </div>
         </div>
         <div class="row">
@@ -33,20 +39,26 @@
         {% if err == "auth_err" %}
         <small>token error</small>
         {% endif %}
-        </div>
-        <div class="footer navbar-fixed-bottom">
-        <!-- Button trigger modal -->
+        <br>
         <button type="button" class="btn btn-default btn-sm" data-toggle="modal" data-target="#myModal">What Is This?</button>
-        <br><br>
-        <small>powered by:</small>
-        <div class="row row-centered row-low-padding ">
-            <div class="spotify-logo">
-            <div class="col-xs-3 col-md-3 col-lg-1 col-centered"><img src="/static/img/Spotify_Logo_Gray.svg" class="img-responsive"></div>
-            <div class="col-xs-3 col-md-3 col-lg-1 col-centered"><img src="/static/img/OpenWeatherMap_Logo_Gray.svg" class="img-responsive vertical-align"></div>
-            </div>
-        </div>
         </div>
     </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+        <div class="row row-centered row-low-padding">
+            <small>powered by:</small>
+            <div class="spotify-logo">
+                <div class="col-xs-3 col-sm-3 col-md-2 col-lg-2 col-centered">
+                    <img src="/static/img/Spotify_Logo_Gray.svg" class="img-responsive">
+                </div>
+                <div class="col-xs-3 col-sm-3 col-md-2 col-lg-2 col-centered">
+                    <img src="/static/img/OpenWeatherMap_Logo_Gray.svg" class="img-responsive vertical-align">
+                </div>
+            </div>
+        </div>
+    </div>
+    </footer>
     <!-- Modal -->
     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
         <div class="modal-dialog" role="document">
@@ -68,7 +80,27 @@
             </div>
         </div>
     </div>
-    </div>
+    <script>
+    $('.btn-toggle').click(function() {
+    $(this).find('.btn').toggleClass('active');
+
+    if ($(this).find('.btn-primary').size()>0) {
+    	$(this).find('.btn').toggleClass('btn-primary');
+    }
+    if ($(this).find('.btn-danger').size()>0) {
+    	$(this).find('.btn').toggleClass('btn-danger');
+    }
+    if ($(this).find('.btn-success').size()>0) {
+    	$(this).find('.btn').toggleClass('btn-success');
+    }
+    if ($(this).find('.btn-info').size()>0) {
+    	$(this).find('.btn').toggleClass('btn-info');
+    }
+
+    $(this).find('.btn').toggleClass('btn-default');
+
+    });
+    </script>
     {% endblock %}
 </body>
 </html>

@@ -138,20 +138,22 @@ def get_saved_tracks(sp, obs):
     results = sp.current_user_saved_tracks(limit=50, offset=0)
     result_list.append(results)
     if results['total'] > 50:
-        upper = (results['total'] - 50) / 50
+        upper = round((results['total'] - 50) / 50)
         # max out at 500 tracks
-        if upper > 10:
-            upper = 10
+        if upper > 8:
+            upper = 8
         for x in range(1, int(upper) + 1):
             results = sp.current_user_saved_tracks(limit=50, offset=50*x)
             result_list.append(results)
     # if user doesn't have enough tracks, use a sp featured playlist
     elif results['total'] < 20:
         naive_datetime_astz = get_loc_naive_datetime(obs)
+        # limit of 6 ~300 tracks
         response = sp.featured_playlists(locale=obs.get_location().get_country(),
-                                         limit=5, timestamp=naive_datetime_astz.isoformat())
+                                         limit=6, timestamp=naive_datetime_astz.isoformat())
         for x in range(0, len(response['playlists']['items'])):
-            tracks = sp.user_playlist_tracks(user=response['playlists']['items'][x]['owner']['id'], playlist_id=response['playlists']['items'][x]['id'], limit=50)
+            tracks = sp.user_playlist_tracks(user=response['playlists']['items'][x]['owner']['id'],
+                                             playlist_id=response['playlists']['items'][x]['id'], limit=60)
             result_list.append(tracks)
     return result_list
 
@@ -177,31 +179,42 @@ def get_weather(f_loc):
 def get_weather_playlist(sp, factor, obs):
     # map weather and track info together
     result_list = get_saved_tracks(sp, obs)
+
+    # unpack tracks from tracks response
     uris = []
+    item_list = []
     for results in result_list:
         for item in results['items']:
+            item_list.append(item)
             uris.append(item['track']['uri'])
+    result_list[:] = []
 
-    #print 'number of songs queried: ' + str(len(uris))
-    feature_list = []
-    # TODO: chunker needs to work on dynamic lengths
+    print 'number of songs queried: ' + str(len(uris))
+    feature_resp = []
+
     for group in chunker(uris, 50):
-        feature_list.append(sp.audio_features(group))
-    items = []
-    # result_list and feature_list are both lists of lists
-    for results, features in zip(result_list, feature_list):
-        # TODO: handle lists of variable lengths
-        for item, feature in zip(results['items'], features):
-            if feature is None:
-                continue
-            track = item['track']
-            # using boundary of 0.1 as a test run
-            if factor - 0.05 < feature['valence'] < factor + 0.05:
-                items.append(item)
-                #print track['name'] + ' - ' + track['artists'][0]['name'] + ' Valence: ' + str(feature['valence'])
-    #print 'number of items after mapping: ' + str(len(items))
-    shuffle(items)
-    return items[:20]
+        feature_resp.append(sp.audio_features(group))
+
+    # unpack tracks from features response
+    all_features = []
+    for features in feature_resp:
+        for feature in features:
+            all_features.append(feature)
+    feature_resp[:] = []
+
+    playlist = []
+    for item, feature in zip(item_list, all_features):
+        if feature is None:
+            continue
+        track = item['track']
+        # using boundary of 0.05 as a test run
+        if factor - 0.06 < feature['valence'] < factor + 0.06:
+            playlist.append(item)
+            # print track['name'] + ' - ' + track['artists'][0]['name'] + ' Valence: ' + str(feature['valence'])
+    print 'number of items after mapping: ' + str(len(playlist))
+
+    shuffle(playlist)
+    return playlist[:20]
 
 
 def get_oauth():
@@ -233,7 +246,7 @@ def get_spotify(auth_token=None):
 
     if token_info["expires_at"] is not None:
         if time.time() > token_info["expires_at"]:
-            print 'refresh stale token ' + str(time.time()) + 'expired: ' + str(token_info["expires_at"])
+            print 'refresh stale token ' + str(time.time()) + ' expired: ' + str(token_info["expires_at"])
             token_info = oauth.refresh_access_token(token_info["refresh_token"])
 
     if bool(token_info) is True:

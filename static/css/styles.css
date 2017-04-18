@@ -38,19 +38,20 @@
 }
 
 /* Media Queries for responsive text */
-/* Custom, iPhone Retina */
-@media only screen and (min-width : 320px) {
+/* Phones- Portrait */
+@media only screen and (min-width : 320px) and (orientation:portrait) {
     .big-icons{font-size:160px;}
     h1{font-size: 24px;}
 }
 
-/* Extra Small Devices, Phones */
-@media only screen and (min-width : 480px) {
-    .big-icons{font-size:288px;}
-    h1{font-size: 24px;}
+/* Phones - Landscape */
+@media only screen and (min-width : 480px) and (orientation:landscape){
+    .big-icons{font-size:96px;}
+    h1{font-size: 16px;}
+    .spotify-logo{ margin-right: 120px;margin-left: 120px;}
 }
 
-/* Small Devices, Tablets */
+/* Small Devices, Tablets  - Portrait*/
 @media only screen and (min-width : 768px) {
     .big-icons{font-size:307px;}
     h1{font-size: 36px;}
@@ -58,11 +59,10 @@
 
 /* Medium Devices, Desktops */
 @media only screen and (min-width : 992px) {
-    .big-icons{font-size:397px;}
+    .big-icons{font-size:240px;}
 }
 
 /* Large Devices, Wide Screens */
 @media only screen and (min-width : 1200px) {
     .big-icons{font-size:240px;}
-
 }
