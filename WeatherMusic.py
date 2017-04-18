@@ -8,7 +8,7 @@ import time
 import spotipy
 import spotipy.oauth2
 import pyowm
-import json
+# import json
 
 
 # spotify web api authorization credentials
@@ -139,22 +139,21 @@ def get_saved_tracks(sp, obs):
     result_list.append(results)
     if results['total'] > 50:
         upper = round((results['total'] - 50) / 50)
-        # max out at 500 tracks
-        if upper > 8:
-            upper = 8
+        # max out at 300 tracks [50 tracks * 6 api calls]
+        if upper > 5:
+            upper = 5
         for x in range(1, int(upper) + 1):
             results = sp.current_user_saved_tracks(limit=50, offset=50*x)
             result_list.append(results)
-    # if user doesn't have enough tracks, use a sp featured playlist
-    elif results['total'] < 20:
-        naive_datetime_astz = get_loc_naive_datetime(obs)
-        # limit of 6 ~300 tracks
-        response = sp.featured_playlists(locale=obs.get_location().get_country(),
-                                         limit=6, timestamp=naive_datetime_astz.isoformat())
-        for x in range(0, len(response['playlists']['items'])):
-            tracks = sp.user_playlist_tracks(user=response['playlists']['items'][x]['owner']['id'],
-                                             playlist_id=response['playlists']['items'][x]['id'], limit=60)
-            result_list.append(tracks)
+    # get a 50/50 mix of featured and saved tracks
+    naive_datetime_astz = get_loc_naive_datetime(obs)
+    # limit of 4 ~200 tracks
+    response = sp.featured_playlists(locale=obs.get_location().get_country(),
+                                     limit=4, timestamp=naive_datetime_astz.isoformat())
+    for x in range(0, len(response['playlists']['items'])):
+        tracks = sp.user_playlist_tracks(user=response['playlists']['items'][x]['owner']['id'],
+                                         playlist_id=response['playlists']['items'][x]['id'], limit=50)
+        result_list.append(tracks)
     return result_list
 
 
@@ -189,7 +188,7 @@ def get_weather_playlist(sp, factor, obs):
             uris.append(item['track']['uri'])
     result_list[:] = []
 
-    print 'number of songs queried: ' + str(len(uris))
+    # print 'number of songs queried: ' + str(len(uris))
     feature_resp = []
 
     for group in chunker(uris, 50):
@@ -211,7 +210,7 @@ def get_weather_playlist(sp, factor, obs):
         if factor - 0.06 < feature['valence'] < factor + 0.06:
             playlist.append(item)
             # print track['name'] + ' - ' + track['artists'][0]['name'] + ' Valence: ' + str(feature['valence'])
-    print 'number of items after mapping: ' + str(len(playlist))
+    # print 'number of items after mapping: ' + str(len(playlist))
 
     shuffle(playlist)
     return playlist[:20]
