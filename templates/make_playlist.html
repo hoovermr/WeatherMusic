@@ -1,23 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+{% extends "base.html" %}
 <head>
-    <link rel="shortcut icon"  type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}"/>
-    <meta charset="UTF-8">
-    <title>Export To Spotify</title>
+    {{ super() }}
 </head>
 <body>
-    {% extends "base.html" %}
-    {% block content %}
+    {% block body %}
     <div style="text-align:center">
-    <h1>{{ location }}</h1>
-    <h1>{{ time }}, {{ temp }} °F</h1>
-    <div class="big-icons"><i class="wi wi-owm-{{ dn_code }}"></i></div>
-    <a href={{ playlist_uri }} class="btn btn-primary">Listen In Spotify App!</a>
-    <br><br>
-    <form role="form" action="/index" method="get">
-        <button class="btn btn-primary" type="submit">Create Another Playlist</button>
-    </form>
-
+        <h1>{{ location }}</h1>
+        <h1>{{ time }}, {{ temp }} °F</h1>
+        <div class="big-icons"><i class="wi wi-owm-{{ dn_code }}"></i></div>
+        <a href={{ playlist_uri }} class="btn btn-primary">Listen In Spotify App!</a>
+        <br><br>
+        <form role="form" action="/index" method="get">
+            <button class="btn btn-primary" type="submit">Create Another Playlist</button>
+        </form>
+    </div>
     {% endblock %}
 </body>
 </html>

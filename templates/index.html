@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+{% extends "base.html" %}
 <head>
-    <link rel="shortcut icon"  type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}"/>
-    <meta charset="UTF-8">
-    <title>Today Sounds Like</title>
+{% block head %}
+    {{ super() }}
+    <link href="/static/css/navbar.css" rel="stylesheet">
+{% endblock %}
 </head>
 <body>
-    {% extends "base.html" %}
-    {% block content %}
-    <link href="/static/css/navbar.css" rel="stylesheet">
+{% block body %}
     <div class="container">
     <div style="text-align:center;">
         <div class="row">
@@ -74,6 +74,6 @@
             </div>
         </div>
     </div>
-    {% endblock %}
+{% endblock %}
 </body>
 </html>
