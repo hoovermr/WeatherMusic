@@ -2,179 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="09d445dd-0965-491b-9847-521ffe3d3379" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip-7.1.0.dist-info/DESCRIPTION.rst" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip-7.1.0.dist-info/METADATA" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip-7.1.0.dist-info/RECORD" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip-7.1.0.dist-info/WHEEL" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip-7.1.0.dist-info/entry_points.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip-7.1.0.dist-info/metadata.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip-7.1.0.dist-info/pbr.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip-7.1.0.dist-info/top_level.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/_markerlib/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/_markerlib/markers.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/html5lib/filters/_base.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/html5lib/ihatexml.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/html5lib/inputstream.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/html5lib/sanitizer.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/html5lib/serializer/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/html5lib/serializer/htmlserializer.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/html5lib/tokenizer.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/html5lib/treebuilders/_base.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/html5lib/treewalkers/_base.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/html5lib/treewalkers/genshistream.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/html5lib/treewalkers/lxmletree.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/html5lib/treewalkers/pulldom.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/html5lib/trie/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/html5lib/trie/_base.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/html5lib/trie/datrie.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/html5lib/trie/py.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/html5lib/utils.py" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/distlib/t32.exe" afterPath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/distlib/t32.exe" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/distlib/t64.exe" afterPath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/distlib/t64.exe" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/distlib/w32.exe" afterPath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/distlib/w32.exe" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/distlib/w64.exe" afterPath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/distlib/w64.exe" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wm_env/Scripts/pip.exe" afterPath="$PROJECT_DIR$/wm_env/Scripts/pip.exe" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wm_env/Scripts/pip2.7.exe" afterPath="$PROJECT_DIR$/wm_env/Scripts/pip2.7.exe" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wm_env/Scripts/pip2.exe" afterPath="$PROJECT_DIR$/wm_env/Scripts/pip2.exe" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/__init__.py" afterPath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/__init__.py" afterPath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/cachecontrol/__init__.py" afterPath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/cachecontrol/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/cachecontrol/adapter.py" afterPath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/cachecontrol/adapter.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/cachecontrol/compat.py" afterPath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/cachecontrol/compat.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/cachecontrol/controller.py" afterPath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/cachecontrol/controller.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/cachecontrol/filewrapper.py" afterPath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/cachecontrol/filewrapper.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/cachecontrol/heuristics.py" afterPath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/cachecontrol/heuristics.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/cachecontrol/serialize.py" afterPath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/cachecontrol/serialize.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/colorama/__init__.py" afterPath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/colorama/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/colorama/ansi.py" afterPath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/colorama/ansi.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/colorama/ansitowin32.py" afterPath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/colorama/ansitowin32.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/colorama/initialise.py" afterPath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/colorama/initialise.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/colorama/win32.py" afterPath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/colorama/win32.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/colorama/winterm.py" afterPath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/colorama/winterm.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/distlib/__init__.py" afterPath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/distlib/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/distlib/_backport/shutil.py" afterPath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/distlib/_backport/shutil.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/distlib/_backport/sysconfig.py" afterPath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/distlib/_backport/sysconfig.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/distlib/_backport/tarfile.py" afterPath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/distlib/_backport/tarfile.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/distlib/compat.py" afterPath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/distlib/compat.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/distlib/database.py" afterPath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/distlib/database.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/distlib/index.py" afterPath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/distlib/index.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/distlib/locators.py" afterPath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/distlib/locators.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/distlib/manifest.py" afterPath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/distlib/manifest.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/distlib/metadata.py" afterPath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/distlib/metadata.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/distlib/resources.py" afterPath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/distlib/resources.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/distlib/scripts.py" afterPath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/distlib/scripts.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/distlib/util.py" afterPath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/distlib/util.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/distlib/version.py" afterPath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/distlib/version.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/distlib/wheel.py" afterPath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/distlib/wheel.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/html5lib/__init__.py" afterPath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/html5lib/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/html5lib/constants.py" afterPath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/html5lib/constants.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/html5lib/filters/alphabeticalattributes.py" afterPath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/html5lib/filters/alphabeticalattributes.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/html5lib/filters/inject_meta_charset.py" afterPath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/html5lib/filters/inject_meta_charset.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/html5lib/filters/lint.py" afterPath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/html5lib/filters/lint.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/html5lib/filters/optionaltags.py" afterPath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/html5lib/filters/optionaltags.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/html5lib/filters/sanitizer.py" afterPath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/html5lib/filters/sanitizer.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/html5lib/filters/whitespace.py" afterPath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/html5lib/filters/whitespace.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/html5lib/html5parser.py" afterPath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/html5lib/html5parser.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/html5lib/treeadapters/__init__.py" afterPath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/html5lib/treeadapters/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/html5lib/treebuilders/__init__.py" afterPath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/html5lib/treebuilders/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/html5lib/treebuilders/dom.py" afterPath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/html5lib/treebuilders/dom.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/html5lib/treebuilders/etree.py" afterPath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/html5lib/treebuilders/etree.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/html5lib/treebuilders/etree_lxml.py" afterPath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/html5lib/treebuilders/etree_lxml.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/html5lib/treewalkers/__init__.py" afterPath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/html5lib/treewalkers/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/html5lib/treewalkers/dom.py" afterPath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/html5lib/treewalkers/dom.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/html5lib/treewalkers/etree.py" afterPath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/html5lib/treewalkers/etree.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/ipaddress.py" afterPath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/ipaddress.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/lockfile/__init__.py" afterPath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/lockfile/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/lockfile/linklockfile.py" afterPath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/lockfile/linklockfile.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/lockfile/mkdirlockfile.py" afterPath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/lockfile/mkdirlockfile.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/lockfile/pidlockfile.py" afterPath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/lockfile/pidlockfile.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/lockfile/sqlitelockfile.py" afterPath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/lockfile/sqlitelockfile.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/lockfile/symlinklockfile.py" afterPath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/lockfile/symlinklockfile.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/packaging/__about__.py" afterPath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/packaging/__about__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/packaging/__init__.py" afterPath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/packaging/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/packaging/_compat.py" afterPath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/packaging/_compat.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/packaging/_structures.py" afterPath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/packaging/_structures.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/packaging/specifiers.py" afterPath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/packaging/specifiers.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/packaging/version.py" afterPath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/packaging/version.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/pkg_resources/__init__.py" afterPath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/pkg_resources/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/progress/bar.py" afterPath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/progress/bar.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/progress/counter.py" afterPath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/progress/counter.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/progress/helpers.py" afterPath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/progress/helpers.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/progress/spinner.py" afterPath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/progress/spinner.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/requests/__init__.py" afterPath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/requests/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/requests/adapters.py" afterPath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/requests/adapters.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/requests/api.py" afterPath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/requests/api.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/requests/auth.py" afterPath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/requests/auth.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/requests/cacert.pem" afterPath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/requests/cacert.pem" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/requests/certs.py" afterPath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/requests/certs.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/requests/compat.py" afterPath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/requests/compat.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/requests/cookies.py" afterPath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/requests/cookies.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/requests/exceptions.py" afterPath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/requests/exceptions.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/requests/hooks.py" afterPath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/requests/hooks.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/requests/models.py" afterPath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/requests/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/requests/packages/__init__.py" afterPath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/requests/packages/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/requests/packages/urllib3/__init__.py" afterPath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/requests/packages/urllib3/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/requests/packages/urllib3/_collections.py" afterPath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/requests/packages/urllib3/_collections.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/requests/packages/urllib3/connection.py" afterPath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/requests/packages/urllib3/connection.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/requests/packages/urllib3/connectionpool.py" afterPath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/requests/packages/urllib3/connectionpool.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/requests/packages/urllib3/contrib/ntlmpool.py" afterPath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/requests/packages/urllib3/contrib/ntlmpool.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/requests/packages/urllib3/contrib/pyopenssl.py" afterPath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/requests/packages/urllib3/contrib/pyopenssl.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/requests/packages/urllib3/exceptions.py" afterPath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/requests/packages/urllib3/exceptions.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/requests/packages/urllib3/fields.py" afterPath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/requests/packages/urllib3/fields.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/requests/packages/urllib3/filepost.py" afterPath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/requests/packages/urllib3/filepost.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/requests/packages/urllib3/packages/__init__.py" afterPath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/requests/packages/urllib3/packages/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/requests/packages/urllib3/packages/six.py" afterPath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/requests/packages/urllib3/packages/six.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/requests/packages/urllib3/poolmanager.py" afterPath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/requests/packages/urllib3/poolmanager.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/requests/packages/urllib3/request.py" afterPath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/requests/packages/urllib3/request.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/requests/packages/urllib3/response.py" afterPath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/requests/packages/urllib3/response.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/requests/packages/urllib3/util/__init__.py" afterPath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/requests/packages/urllib3/util/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/requests/packages/urllib3/util/connection.py" afterPath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/requests/packages/urllib3/util/connection.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/requests/packages/urllib3/util/request.py" afterPath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/requests/packages/urllib3/util/request.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/requests/packages/urllib3/util/response.py" afterPath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/requests/packages/urllib3/util/response.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/requests/packages/urllib3/util/retry.py" afterPath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/requests/packages/urllib3/util/retry.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/requests/packages/urllib3/util/ssl_.py" afterPath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/requests/packages/urllib3/util/ssl_.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/requests/packages/urllib3/util/timeout.py" afterPath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/requests/packages/urllib3/util/timeout.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/requests/packages/urllib3/util/url.py" afterPath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/requests/packages/urllib3/util/url.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/requests/sessions.py" afterPath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/requests/sessions.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/requests/status_codes.py" afterPath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/requests/status_codes.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/requests/structures.py" afterPath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/requests/structures.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/requests/utils.py" afterPath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/requests/utils.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/six.py" afterPath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/_vendor/six.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/basecommand.py" afterPath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/basecommand.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/baseparser.py" afterPath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/baseparser.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/cmdoptions.py" afterPath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/cmdoptions.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/commands/__init__.py" afterPath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/commands/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/commands/completion.py" afterPath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/commands/completion.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/commands/freeze.py" afterPath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/commands/freeze.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/commands/install.py" afterPath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/commands/install.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/commands/list.py" afterPath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/commands/list.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/commands/search.py" afterPath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/commands/search.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/commands/show.py" afterPath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/commands/show.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/commands/wheel.py" afterPath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/commands/wheel.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/compat/__init__.py" afterPath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/compat/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/download.py" afterPath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/download.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/exceptions.py" afterPath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/exceptions.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/index.py" afterPath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/index.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/locations.py" afterPath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/locations.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/operations/freeze.py" afterPath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/operations/freeze.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/pep425tags.py" afterPath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/pep425tags.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/req/req_file.py" afterPath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/req/req_file.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/req/req_install.py" afterPath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/req/req_install.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/req/req_set.py" afterPath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/req/req_set.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/req/req_uninstall.py" afterPath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/req/req_uninstall.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/utils/__init__.py" afterPath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/utils/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/utils/appdirs.py" afterPath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/utils/appdirs.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/utils/deprecation.py" afterPath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/utils/deprecation.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/utils/logging.py" afterPath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/utils/logging.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/utils/outdated.py" afterPath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/utils/outdated.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/utils/ui.py" afterPath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/utils/ui.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/vcs/__init__.py" afterPath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/vcs/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/vcs/bazaar.py" afterPath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/vcs/bazaar.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/vcs/git.py" afterPath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/vcs/git.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/vcs/mercurial.py" afterPath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/vcs/mercurial.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/vcs/subversion.py" afterPath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/vcs/subversion.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/wheel.py" afterPath="$PROJECT_DIR$/wm_env/Lib/site-packages/pip/wheel.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WeatherMusic.py" afterPath="$PROJECT_DIR$/WeatherMusic.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/base.html" afterPath="$PROJECT_DIR$/templates/base.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -184,8 +14,8 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/WeatherMusic$WeatherMusic.coverage" NAME="WeatherMusic Coverage Results" MODIFIED="1490955046564" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/MusicTemp$MusicTemp.coverage" NAME="MusicTemp Coverage Results" MODIFIED="1488834036656" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/WeatherMusic$WeatherMusic.coverage" NAME="WeatherMusic Coverage Results" MODIFIED="1490175297200" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -204,8 +34,8 @@
       <file leaf-file-name="WeatherMusic.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/WeatherMusic.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="18" lean-forward="false" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
+            <state relative-caret-position="238">
+              <caret line="14" column="46" lean-forward="true" selection-start-line="14" selection-start-column="46" selection-end-line="14" selection-end-column="46" />
               <folding>
                 <element signature="e#24#92#0" expanded="true" />
               </folding>
@@ -213,21 +43,37 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="requirements.txt" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/requirements.txt">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="20" column="11" lean-forward="true" selection-start-line="20" selection-start-column="11" selection-end-line="20" selection-end-column="11" />
-              <folding />
+            <state relative-caret-position="255">
+              <caret line="76" column="14" lean-forward="true" selection-start-line="76" selection-start-column="14" selection-end-line="76" selection-end-column="14" />
+              <folding>
+                <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#footer#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="client.py" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/AppData/Local/Continuum/Anaconda2/Lib/site-packages/spotipy/client.py">
+      <file leaf-file-name="gen_playlist.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/gen_playlist.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="6664">
-              <caret line="396" column="28" lean-forward="false" selection-start-line="396" selection-start-column="8" selection-end-line="396" selection-end-column="28" />
+            <state relative-caret-position="34">
+              <caret line="2" column="25" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="base.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/base.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="559">
+              <caret line="33" column="85" lean-forward="true" selection-start-line="33" selection-start-column="85" selection-end-line="33" selection-end-column="85" />
               <folding />
             </state>
           </provider>
@@ -236,59 +82,11 @@
       <file leaf-file-name="make_playlist.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/make_playlist.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="22" column="7" lean-forward="false" selection-start-line="22" selection-start-column="7" selection-end-line="22" selection-end-column="7" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="gen_playlist.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/gen_playlist.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" column="10" lean-forward="false" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="31" column="55" lean-forward="false" selection-start-line="31" selection-start-column="55" selection-end-line="31" selection-end-column="55" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="misc.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/js/misc.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="24" lean-forward="false" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="base.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/base.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="29" column="42" lean-forward="false" selection-start-line="29" selection-start-column="42" selection-end-line="29" selection-end-column="42" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="styles.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/css/styles.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" column="32" lean-forward="false" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="32" />
-              <folding />
+            <state relative-caret-position="340">
+              <caret line="20" column="7" lean-forward="true" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="7" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -305,6 +103,12 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>app</find>
+      <find>dn_code</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="ROOT_SYNC" value="DONT_SYNC" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -318,14 +122,16 @@
         <option value="$PROJECT_DIR$/../MusicTemp/MusicTemp.py" />
         <option value="$PROJECT_DIR$/templates/callback.html" />
         <option value="$USER_HOME$/Documents/GitHub/actually_random/actually_random.py" />
-        <option value="$PROJECT_DIR$/templates/make_playlist.html" />
         <option value="$PROJECT_DIR$/static/css/styles.css" />
-        <option value="$PROJECT_DIR$/WeatherMusic.py" />
-        <option value="$PROJECT_DIR$/templates/index.html" />
-        <option value="$PROJECT_DIR$/templates/base.html" />
         <option value="$PROJECT_DIR$/static/js/misc.js" />
-        <option value="$PROJECT_DIR$/templates/gen_playlist.html" />
         <option value="$PROJECT_DIR$/requirements.txt" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/.ebextensions/wm.config" />
+        <option value="$PROJECT_DIR$/templates/index.html" />
+        <option value="$PROJECT_DIR$/templates/gen_playlist.html" />
+        <option value="$PROJECT_DIR$/templates/make_playlist.html" />
+        <option value="$PROJECT_DIR$/WeatherMusic.py" />
+        <option value="$PROJECT_DIR$/templates/base.html" />
       </list>
     </option>
   </component>
@@ -336,10 +142,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
+    <option name="x" value="1912" />
     <option name="y" value="-8" />
     <option name="width" value="1936" />
-    <option name="height" value="1066" />
+    <option name="height" value="1096" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -356,35 +162,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WeatherMusic" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="&lt; Python 2.7.11 virtualenv at C:\Users\mhoover\PycharmProjects\WeatherMusic\wm_env &gt;" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WeatherMusic" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WeatherMusic" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
       <pane id="Scope">
         <subPane subId="Project Files">
           <PATH>
@@ -413,30 +190,140 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WeatherMusic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WeatherMusic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WeatherMusic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WeatherMusic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WeatherMusic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WeatherMusic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WeatherMusic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WeatherMusic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WeatherMusic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WeatherMusic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="img" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WeatherMusic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WeatherMusic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="font" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js.eslint.eslintPackage" value="" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
-    <property name="last_opened_file_path" value="$USER_HOME$/AppData/Local/Continuum/Anaconda2/python.exe" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../OnTV_ISL_Viewer" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\mhoover\PycharmProjects\WeatherMusic\static" />
+      <recent name="C:\Users\mhoover\PycharmProjects\WeatherMusic" />
+      <recent name="$PROJECT_DIR$/static" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="C:\Users\mhoover\PycharmProjects\WeatherMusic\static\img" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\mhoover\PycharmProjects\WeatherMusic\static\font" />
       <recent name="C:\Users\mhoover\PycharmProjects\WeatherMusic\static\css" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/static" />
-      <recent name="$PROJECT_DIR$" />
-      <recent name="C:\Users\mhoover\PycharmProjects\WeatherMusic\static\img" />
-      <recent name="C:\Users\mhoover\PycharmProjects\WeatherMusic\static" />
-    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
   </component>
   <component name="RunManager" selected="Python.WeatherMusic">
-    <configuration default="true" type="DjangoTestsConfigurationType" factoryName="Django tests">
+    <configuration default="true" type="OdpsPythonConfigurationType" factoryName="MaxCompute Python">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -448,49 +335,15 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="WeatherMusic" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="TARGET" value="" />
-      <option name="SETTINGS_FILE" value="" />
-      <option name="CUSTOM_SETTINGS" value="false" />
-      <option name="USE_OPTIONS" value="false" />
-      <option name="OPTIONS" value="" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
-      <config-file value="" />
-      <node-interpreter value="project" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
-      <method />
-    </configuration>
-    <configuration default="true" type="PyBehaveRunConfigurationType" factoryName="Behave">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="WeatherMusic" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="ADDITIONAL_ARGS" value="" />
-      <method />
-    </configuration>
-    <configuration default="true" type="PyLettuceRunConfigurationType" factoryName="Lettuce">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="WeatherMusic" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="ADDITIONAL_ARGS" value="" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="PROJECT_NAME" value="" />
+      <option name="TABLE_NAME" value="" />
+      <option name="TABLE_COLUMNS" value="" />
+      <option name="TABLE_PARTITION" value="" />
+      <option name="MAIN_CLASS" value="" />
       <method />
     </configuration>
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
@@ -509,6 +362,7 @@
       <option name="SCRIPT_NAME" value="" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
       <method />
     </configuration>
     <configuration default="true" type="Tox" factoryName="Tox">
@@ -522,42 +376,6 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <module name="MusicTemp" />
-      <method />
-    </configuration>
-    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
-      <node-interpreter>project</node-interpreter>
-      <node-options />
-      <gulpfile />
-      <tasks />
-      <arguments />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
-      <command value="run" />
-      <scripts />
-      <node-interpreter value="project" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="tests" factoryName="Attests">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="MusicTemp" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_SCRIPT" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
       <method />
     </configuration>
     <configuration default="true" type="tests" factoryName="Doctests">
@@ -591,15 +409,10 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="MusicTemp" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_SCRIPT" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <option name="PARAMS" value="" />
-      <option name="USE_PARAM" value="false" />
+      <option name="_new_regexPattern" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;.&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method />
     </configuration>
     <configuration default="true" type="tests" factoryName="Unittests">
@@ -613,19 +426,51 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="MusicTemp" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_SCRIPT" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <option name="PUREUNITTEST" value="true" />
-      <option name="PARAMS" value="" />
-      <option name="USE_PARAM" value="false" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;.&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method />
     </configuration>
     <configuration default="true" type="tests" factoryName="py.test">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="MusicTemp" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;.&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method />
+    </configuration>
+    <configuration default="false" name="WeatherMusic" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\mhoover\PycharmProjects\WeatherMusic\wm_env\Scripts\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="WeatherMusic" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/WeatherMusic.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <method />
+    </configuration>
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="Python.WeatherMusic" />
+    </list>
+    <configuration default="true" type="tests" factoryName="Attests">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs />
@@ -643,34 +488,8 @@
       <option name="TEST_TYPE" value="TEST_SCRIPT" />
       <option name="PATTERN" value="" />
       <option name="USE_PATTERN" value="false" />
-      <option name="testToRun" value="" />
-      <option name="keywords" value="" />
-      <option name="params" value="" />
-      <option name="USE_PARAM" value="false" />
-      <option name="USE_KEYWORD" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="WeatherMusic" type="PythonConfigurationType" factoryName="Python">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="C:\Users\mhoover\AppData\Local\Continuum\Anaconda2\python.exe" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="WeatherMusic" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/WeatherMusic.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
-    <list size="1">
-      <item index="0" class="java.lang.String" itemvalue="Python.WeatherMusic" />
-    </list>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
@@ -683,6 +502,28 @@
       <option name="presentableId" value="Default" />
       <updated>1488828798266</updated>
     </task>
+    <task id="LOCAL-00001" summary="add social icons and meta tags">
+      <created>1499870282871</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1499870282871</updated>
+    </task>
+    <task id="LOCAL-00002" summary="prod">
+      <created>1499932536906</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1499932536906</updated>
+    </task>
+    <task id="LOCAL-00003" summary="fix templates">
+      <created>1500895621141</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1500895621141</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TodoView">
@@ -695,49 +536,63 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
+    <frame x="1912" y="-8" width="1936" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12953092" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32917964" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36459553" sideWeight="0.50277776" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297568" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="DB Browser" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="DB Execution Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2808146" sideWeight="0.50479746" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.227224" sideWeight="0.49520257" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38156486" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290461" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24964234" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290461" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20415778" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="MaxCompute Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="MaxCompute Job" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="MaxCompute Job Explorer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24964234" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39978564" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="MaxCompute Project Explorer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3301179" sideWeight="0.49722221" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3281412" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297568" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32917964" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="DB Execution Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36459553" sideWeight="0.50277776" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32917964" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3301179" sideWeight="0.49722221" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32917964" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12899786" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2808146" sideWeight="0.50479746" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3281412" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="MaxCompute Job" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="MaxCompute Job Explorer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3281412" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297568" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24964234" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24964234" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39978564" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="MaxCompute Project Explorer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32917964" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="DB Browser" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.227224" sideWeight="0.49520257" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38156486" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290461" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290461" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20415778" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="MaxCompute Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -745,64 +600,48 @@
   </component>
   <component name="UnknownFeatures">
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.css" />
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.config" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add social icons and meta tags" />
+    <MESSAGE value="prod" />
+    <MESSAGE value="fix templates" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix templates" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/templates/make_playlist.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="7" lean-forward="false" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/gen_playlist.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="33" lean-forward="false" selection-start-line="11" selection-start-column="33" selection-end-line="11" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="10" lean-forward="false" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/css/styles.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="16" lean-forward="false" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WeatherMusic.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="935">
-          <caret line="55" column="0" lean-forward="true" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
-          <folding>
-            <element signature="e#24#92#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/make_playlist.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -815,7 +654,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -823,7 +664,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="14" column="10" lean-forward="true" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
-          <folding />
+          <folding>
+            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#footer#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -838,7 +683,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -864,7 +708,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="544">
           <caret line="32" column="15" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#footer#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -879,7 +727,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
           <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -905,7 +752,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="544">
           <caret line="32" column="15" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#footer#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -920,7 +771,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
           <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -940,7 +790,6 @@
     <entry file="file://$USER_HOME$/AppData/Local/Continuum/Anaconda2/Lib/site-packages/pyowm/webapi25/__init__.py" />
     <entry file="file://$USER_HOME$/AppData/Local/Continuum/Anaconda2/Lib/site-packages/pyowm/__init__.py" />
     <entry file="file://$USER_HOME$/AppData/Local/Continuum/Anaconda2/Lib/site-packages/pyowm/webapi25/observation.py" />
-    <entry file="file://$USER_HOME$/AppData/Local/Continuum/Anaconda2/Lib/site-packages/pyowm/webapi25/weather.py" />
     <entry file="file://$PROJECT_DIR$/.idea/WeatherMusic.iml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -983,84 +832,134 @@
         </state>
       </provider>
     </entry>
+    <entry file="file:///Library/Python/2.7/site-packages/spotipy/oauth2.py" />
+    <entry file="file:///Library/Python/2.7/site-packages/spotipy/client.py" />
+    <entry file="file://$PROJECT_DIR$/static/css/styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="32" lean-forward="false" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.tokens" />
+    <entry file="file://$USER_HOME$/AppData/Local/Continuum/Anaconda2/Lib/site-packages/spotipy/client.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="13838">
+          <caret line="818" column="11" lean-forward="false" selection-start-line="818" selection-start-column="11" selection-end-line="818" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Continuum/Anaconda2/Lib/site-packages/spotipy/oauth2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2737">
+          <caret line="234" column="31" lean-forward="false" selection-start-line="234" selection-start-column="31" selection-end-line="234" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wm_env/Lib/site-packages/timezonefinder/helpers_numba.py" />
+    <entry file="file://$USER_HOME$/AppData/Local/Continuum/Anaconda2/Lib/site-packages/tornado/tcpclient.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="66" column="53" lean-forward="false" selection-start-line="66" selection-start-column="53" selection-end-line="66" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm2017.1/system/python_stubs/-1546487231/__builtin__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="2057" column="8" lean-forward="false" selection-start-line="2057" selection-start-column="8" selection-end-line="2057" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Continuum/Anaconda2/Lib/site-packages/pyowm/webapi25/weather.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="251">
+          <caret line="229" column="22" lean-forward="false" selection-start-line="229" selection-start-column="22" selection-end-line="229" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/static/favicon.ico">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
-    <entry file="file:///Library/Python/2.7/site-packages/spotipy/oauth2.py" />
-    <entry file="file:///Library/Python/2.7/site-packages/spotipy/client.py" />
-    <entry file="file://$USER_HOME$/AppData/Local/Continuum/Anaconda2/Lib/site-packages/spotipy/client.py">
+    <entry file="file://$PROJECT_DIR$/.ebextensions/wm.config">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6664">
-          <caret line="396" column="28" lean-forward="false" selection-start-line="396" selection-start-column="8" selection-end-line="396" selection-end-column="28" />
+        <state relative-caret-position="34">
+          <caret line="2" column="33" lean-forward="false" selection-start-line="2" selection-start-column="33" selection-end-line="2" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="6" lean-forward="false" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/css/styles.css">
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="32" lean-forward="false" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="29" column="42" lean-forward="false" selection-start-line="29" selection-start-column="42" selection-end-line="29" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/make_playlist.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="7" lean-forward="false" selection-start-line="22" selection-start-column="7" selection-end-line="22" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="31" column="55" lean-forward="false" selection-start-line="31" selection-start-column="55" selection-end-line="31" selection-end-column="55" />
+        <state relative-caret-position="136">
+          <caret line="8" column="19" lean-forward="false" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/static/js/misc.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="24" lean-forward="false" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
+        <state relative-caret-position="459">
+          <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore" />
+    <entry file="file://$PROJECT_DIR$/templates/make_playlist.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="7" lean-forward="true" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="7" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/templates/gen_playlist.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="10" lean-forward="false" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
-          <folding />
+        <state relative-caret-position="34">
+          <caret line="2" column="25" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/WeatherMusic.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="18" lean-forward="false" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
+        <state relative-caret-position="238">
+          <caret line="14" column="46" lean-forward="true" selection-start-line="14" selection-start-column="46" selection-end-line="14" selection-end-column="46" />
           <folding>
             <element signature="e#24#92#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/requirements.txt">
+    <entry file="file://$PROJECT_DIR$/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="11" lean-forward="true" selection-start-line="20" selection-start-column="11" selection-end-line="20" selection-end-column="11" />
+        <state relative-caret-position="255">
+          <caret line="76" column="14" lean-forward="true" selection-start-line="76" selection-start-column="14" selection-end-line="76" selection-end-column="14" />
+          <folding>
+            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#footer#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="559">
+          <caret line="33" column="85" lean-forward="true" selection-start-line="33" selection-start-column="85" selection-end-line="33" selection-end-column="85" />
           <folding />
         </state>
       </provider>

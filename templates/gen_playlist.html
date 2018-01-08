@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+{% extends "base.html" %}
 <head>
-    <link rel="shortcut icon"  type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}"/>
-    <meta charset="UTF-8">
-    <title>Weather Music</title>
+    {{ super() }}
 </head>
 <body>
-    {% extends "base.html" %}
-    {% block content %}
+    {% block body %}
     <div style="text-align:center">
     <h1>{{ loc.get_name() }}, {{ loc.get_country() }}</h1>
     <h1>{{ datetime }}, {{ w.get_temperature('fahrenheit')['temp'] }} °F</h1>

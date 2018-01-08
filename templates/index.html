@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+{% extends "base.html" %}
 <head>
-    <link rel="shortcut icon"  type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}"/>
-    <meta charset="UTF-8">
-    <title>Today Sounds Like</title>
+{% block head %}
+    {{ super() }}
+    <link href="/static/css/navbar.css" rel="stylesheet">
+{% endblock %}
 </head>
 <body>
-    {% extends "base.html" %}
-    {% block content %}
-    <link href="/static/css/navbar.css" rel="stylesheet">
+{% block body %}
     <div class="container">
     <div style="text-align:center;">
         <div class="row">
@@ -67,12 +67,13 @@
                     Today Sounds Like makes a personalized playlist using a mix of your saved tracks, featured Spotify playlists, and the weather conditions around you!
                     Simply enter your location and the app will curate the perfect playlist for your city.<br><br>
                     Let me know what you think!<br><br>
-                    Mark Hoover (hoovermr@gmail.com)
+                    Mark Hoover<br>
+                    <a href="mailto:hoovermr@gmail.com" class="pure-button button-socicon"><span class="inline-socicon socicon-mail"></span></a>
                 </div>
                 <div class="modal-footer"><button type="button" class="btn btn-default center-block" data-dismiss="modal">Close</button></div>
             </div>
         </div>
     </div>
-    {% endblock %}
+{% endblock %}
 </body>
 </html>
